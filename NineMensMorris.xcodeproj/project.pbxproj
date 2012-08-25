@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B16B6F215E90602000943B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16B6F115E90602000943B0 /* UIKit.framework */; };
+		3B16B6F415E90602000943B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16B6F315E90602000943B0 /* Foundation.framework */; };
+		3B16B6F615E90602000943B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16B6F515E90602000943B0 /* CoreGraphics.framework */; };
+		3B16B6FC15E90602000943B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B6FA15E90602000943B0 /* InfoPlist.strings */; };
+		3B16B6FE15E90602000943B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B16B6FD15E90602000943B0 /* main.m */; };
+		3B16B70215E90602000943B0 /* NMMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B16B70115E90602000943B0 /* NMMAppDelegate.m */; };
+		3B16B70515E90602000943B0 /* NMMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B16B70415E90602000943B0 /* NMMViewController.m */; };
+		3B16B70815E90602000943B0 /* NMMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B70615E90602000943B0 /* NMMViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B16B6ED15E90602000943B0 /* NineMensMorris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineMensMorris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B16B6F115E90602000943B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B16B6F315E90602000943B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B16B6F515E90602000943B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B16B6F915E90602000943B0 /* NineMensMorris-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NineMensMorris-Info.plist"; sourceTree = "<group>"; };
+		3B16B6FB15E90602000943B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B16B6FD15E90602000943B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B16B6FF15E90602000943B0 /* NineMensMorris-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NineMensMorris-Prefix.pch"; sourceTree = "<group>"; };
+		3B16B70015E90602000943B0 /* NMMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMMAppDelegate.h; sourceTree = "<group>"; };
+		3B16B70115E90602000943B0 /* NMMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMMAppDelegate.m; sourceTree = "<group>"; };
+		3B16B70315E90602000943B0 /* NMMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMMViewController.h; sourceTree = "<group>"; };
+		3B16B70415E90602000943B0 /* NMMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMMViewController.m; sourceTree = "<group>"; };
+		3B16B70715E90602000943B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NMMViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B16B6EA15E90602000943B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B16B6F215E90602000943B0 /* UIKit.framework in Frameworks */,
+				3B16B6F415E90602000943B0 /* Foundation.framework in Frameworks */,
+				3B16B6F615E90602000943B0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B16B6E215E90602000943B0 = {
+			isa = PBXGroup;
+			children = (
+				3B16B6F715E90602000943B0 /* NineMensMorris */,
+				3B16B6F015E90602000943B0 /* Frameworks */,
+				3B16B6EE15E90602000943B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B16B6EE15E90602000943B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B16B6ED15E90602000943B0 /* NineMensMorris.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B16B6F015E90602000943B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B16B6F115E90602000943B0 /* UIKit.framework */,
+				3B16B6F315E90602000943B0 /* Foundation.framework */,
+				3B16B6F515E90602000943B0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B16B6F715E90602000943B0 /* NineMensMorris */ = {
+			isa = PBXGroup;
+			children = (
+				3B16B70015E90602000943B0 /* NMMAppDelegate.h */,
+				3B16B70115E90602000943B0 /* NMMAppDelegate.m */,
+				3B16B70315E90602000943B0 /* NMMViewController.h */,
+				3B16B70415E90602000943B0 /* NMMViewController.m */,
+				3B16B70615E90602000943B0 /* NMMViewController.xib */,
+				3B16B6F815E90602000943B0 /* Supporting Files */,
+			);
+			path = NineMensMorris;
+			sourceTree = "<group>";
+		};
+		3B16B6F815E90602000943B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B16B6F915E90602000943B0 /* NineMensMorris-Info.plist */,
+				3B16B6FA15E90602000943B0 /* InfoPlist.strings */,
+				3B16B6FD15E90602000943B0 /* main.m */,
+				3B16B6FF15E90602000943B0 /* NineMensMorris-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B16B6EC15E90602000943B0 /* NineMensMorris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B16B70B15E90602000943B0 /* Build configuration list for PBXNativeTarget "NineMensMorris" */;
+			buildPhases = (
+				3B16B6E915E90602000943B0 /* Sources */,
+				3B16B6EA15E90602000943B0 /* Frameworks */,
+				3B16B6EB15E90602000943B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NineMensMorris;
+			productName = NineMensMorris;
+			productReference = 3B16B6ED15E90602000943B0 /* NineMensMorris.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B16B6E415E90602000943B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NMM;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = UoL;
+			};
+			buildConfigurationList = 3B16B6E715E90602000943B0 /* Build configuration list for PBXProject "NineMensMorris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B16B6E215E90602000943B0;
+			productRefGroup = 3B16B6EE15E90602000943B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B16B6EC15E90602000943B0 /* NineMensMorris */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B16B6EB15E90602000943B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B16B6FC15E90602000943B0 /* InfoPlist.strings in Resources */,
+				3B16B70815E90602000943B0 /* NMMViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B16B6E915E90602000943B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B16B6FE15E90602000943B0 /* main.m in Sources */,
+				3B16B70215E90602000943B0 /* NMMAppDelegate.m in Sources */,
+				3B16B70515E90602000943B0 /* NMMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B16B6FA15E90602000943B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B16B6FB15E90602000943B0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B16B70615E90602000943B0 /* NMMViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B16B70715E90602000943B0 /* en */,
+			);
+			name = NMMViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B16B70915E90602000943B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3B16B70A15E90602000943B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B16B70C15E90602000943B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NineMensMorris/NineMensMorris-Prefix.pch";
+				INFOPLIST_FILE = "NineMensMorris/NineMensMorris-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B16B70D15E90602000943B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NineMensMorris/NineMensMorris-Prefix.pch";
+				INFOPLIST_FILE = "NineMensMorris/NineMensMorris-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B16B6E715E90602000943B0 /* Build configuration list for PBXProject "NineMensMorris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B16B70915E90602000943B0 /* Debug */,
+				3B16B70A15E90602000943B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B16B70B15E90602000943B0 /* Build configuration list for PBXNativeTarget "NineMensMorris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B16B70C15E90602000943B0 /* Debug */,
+				3B16B70D15E90602000943B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B16B6E415E90602000943B0 /* Project object */;
+}

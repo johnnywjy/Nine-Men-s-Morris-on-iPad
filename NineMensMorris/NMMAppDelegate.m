@@ -1,14 +1,7 @@
-//
-//  NMMAppDelegate.m
-//  NineMensMorris
-//
-//  Created by lynny on 25/08/2012.
-//  Copyright (c) 2012 UoL. All rights reserved.
-//
+
 
 #import "NMMAppDelegate.h"
-
-#import "NMMViewController.h"
+#import "NMMStartViewController.h"
 
 @implementation NMMAppDelegate
 
@@ -16,7 +9,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[NMMViewController alloc] initWithNibName:@"NMMViewController" bundle:nil];
+    self.viewController = [[NMMStartViewController alloc] initWithNibName:@"NMMStartViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -30,7 +23,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

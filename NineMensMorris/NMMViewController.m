@@ -182,7 +182,7 @@
     [_b9 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
     
     //set Label/Button style
-    [_returnButton nmmApplyButtonStyle];
+    [_returnButton applyButtonStyle];
     [_p1label applyLabelStylePlayer];
     [_p2label applyLabelStylePlayer];
     [_p1msg applyLabelStyleMsg];

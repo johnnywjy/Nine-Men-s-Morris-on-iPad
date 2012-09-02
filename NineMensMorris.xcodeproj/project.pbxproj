@@ -23,21 +23,28 @@
 		3B16B71C15E90698000943B0 /* NMMOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B71A15E90698000943B0 /* NMMOptionsViewController.xib */; };
 		3B16B71F15E906CA000943B0 /* NMM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B16B71E15E906CA000943B0 /* NMM.m */; };
 		3B16B73115E91C78000943B0 /* sound0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B73015E91C78000943B0 /* sound0.wav */; };
-		3B16B73615E91C8A000943B0 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B73215E91C8A000943B0 /* black.png */; };
-		3B16B73715E91C8A000943B0 /* landscapeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B73315E91C8A000943B0 /* landscapeBG.png */; };
-		3B16B73815E91C8A000943B0 /* portraitBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B73415E91C8A000943B0 /* portraitBG.png */; };
-		3B16B73915E91C8A000943B0 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B73515E91C8A000943B0 /* white.png */; };
 		3B16B73B15E91E8A000943B0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16B73A15E91E8A000943B0 /* AudioToolbox.framework */; };
 		3B16B73D15E91E8F000943B0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16B73C15E91E8F000943B0 /* GameKit.framework */; };
 		3B16B74015E936A2000943B0 /* NMMSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B16B73F15E936A2000943B0 /* NMMSettings.m */; };
+		3B190F2715F3BBF400929826 /* UITextView+NMMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B190F2615F3BBF400929826 /* UITextView+NMMAdditions.m */; };
+		3B190F5515F3C65F00929826 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4615F3C65F00929826 /* black.png */; };
+		3B190F5615F3C65F00929826 /* black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4715F3C65F00929826 /* black@2x.png */; };
+		3B190F5715F3C65F00929826 /* blackHL.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4815F3C65F00929826 /* blackHL.png */; };
+		3B190F5815F3C65F00929826 /* blackHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4915F3C65F00929826 /* blackHL@2x.png */; };
+		3B190F5915F3C65F00929826 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4A15F3C65F00929826 /* button.png */; };
+		3B190F5A15F3C65F00929826 /* buttonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4B15F3C65F00929826 /* buttonPressed.png */; };
+		3B190F5B15F3C65F00929826 /* InfoPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4C15F3C65F00929826 /* InfoPortrait.png */; };
+		3B190F5C15F3C65F00929826 /* landscapeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4D15F3C65F00929826 /* landscapeBG.png */; };
+		3B190F5D15F3C65F00929826 /* OPportrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4E15F3C65F00929826 /* OPportrait.png */; };
+		3B190F5E15F3C65F00929826 /* OptionsPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4F15F3C65F00929826 /* OptionsPortrait.png */; };
+		3B190F5F15F3C65F00929826 /* portraitBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F5015F3C65F00929826 /* portraitBG.png */; };
+		3B190F6015F3C65F00929826 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F5115F3C65F00929826 /* white.png */; };
+		3B190F6115F3C65F00929826 /* white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F5215F3C65F00929826 /* white@2x.png */; };
+		3B190F6215F3C65F00929826 /* whiteHL.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F5315F3C65F00929826 /* whiteHL.png */; };
+		3B190F6315F3C65F00929826 /* whiteHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F5415F3C65F00929826 /* whiteHL@2x.png */; };
 		3B41C5A815F0FE160001D2E7 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C5A715F0FE160001D2E7 /* sound1.wav */; };
-		3B41C5AB15F0FED30001D2E7 /* OPportrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C5AA15F0FED30001D2E7 /* OPportrait.png */; };
-		3B41C5AD15F0FFEE0001D2E7 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C5AC15F0FFEE0001D2E7 /* button.png */; };
 		3B41C5B115F101490001D2E7 /* UIFont+NMMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C5B015F101490001D2E7 /* UIFont+NMMAdditions.m */; };
 		3B41C5B615F104D10001D2E7 /* UIButton+NMMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C5B515F104D10001D2E7 /* UIButton+NMMAdditions.m */; };
-		3B41C5B915F106CB0001D2E7 /* buttonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C5B815F106CB0001D2E7 /* buttonPressed.png */; };
-		3B41C5BC15F124040001D2E7 /* blackHL.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C5BA15F124040001D2E7 /* blackHL.png */; };
-		3B41C5BD15F124040001D2E7 /* whiteHL.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C5BB15F124040001D2E7 /* whiteHL.png */; };
 		3B41C5BF15F12B390001D2E7 /* sound3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C5BE15F12B390001D2E7 /* sound3.wav */; };
 		3B41C5C115F137480001D2E7 /* Action_Man.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C5C015F137480001D2E7 /* Action_Man.ttf */; };
 		3B41C5C415F1393A0001D2E7 /* UILabel+NMMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C5C315F1393A0001D2E7 /* UILabel+NMMAdditions.m */; };
@@ -69,24 +76,32 @@
 		3B16B71D15E906CA000943B0 /* NMM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMM.h; sourceTree = "<group>"; };
 		3B16B71E15E906CA000943B0 /* NMM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMM.m; sourceTree = "<group>"; };
 		3B16B73015E91C78000943B0 /* sound0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound0.wav; path = NineMensMorris/Sound/sound0.wav; sourceTree = "<group>"; };
-		3B16B73215E91C8A000943B0 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = NineMensMorris/Images/black.png; sourceTree = "<group>"; };
-		3B16B73315E91C8A000943B0 /* landscapeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = landscapeBG.png; path = NineMensMorris/Images/landscapeBG.png; sourceTree = "<group>"; };
-		3B16B73415E91C8A000943B0 /* portraitBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = portraitBG.png; path = NineMensMorris/Images/portraitBG.png; sourceTree = "<group>"; };
-		3B16B73515E91C8A000943B0 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = NineMensMorris/Images/white.png; sourceTree = "<group>"; };
 		3B16B73A15E91E8A000943B0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3B16B73C15E91E8F000943B0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		3B16B73E15E936A2000943B0 /* NMMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMSettings.h; sourceTree = "<group>"; };
 		3B16B73F15E936A2000943B0 /* NMMSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMSettings.m; sourceTree = "<group>"; };
+		3B190F2515F3BBF400929826 /* UITextView+NMMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+NMMAdditions.h"; sourceTree = "<group>"; };
+		3B190F2615F3BBF400929826 /* UITextView+NMMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+NMMAdditions.m"; sourceTree = "<group>"; };
+		3B190F4615F3C65F00929826 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = NineMensMorris/Images/black.png; sourceTree = "<group>"; };
+		3B190F4715F3C65F00929826 /* black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "black@2x.png"; path = "NineMensMorris/Images/black@2x.png"; sourceTree = "<group>"; };
+		3B190F4815F3C65F00929826 /* blackHL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackHL.png; path = NineMensMorris/Images/blackHL.png; sourceTree = "<group>"; };
+		3B190F4915F3C65F00929826 /* blackHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blackHL@2x.png"; path = "NineMensMorris/Images/blackHL@2x.png"; sourceTree = "<group>"; };
+		3B190F4A15F3C65F00929826 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = NineMensMorris/Images/button.png; sourceTree = "<group>"; };
+		3B190F4B15F3C65F00929826 /* buttonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPressed.png; path = NineMensMorris/Images/buttonPressed.png; sourceTree = "<group>"; };
+		3B190F4C15F3C65F00929826 /* InfoPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InfoPortrait.png; path = NineMensMorris/Images/InfoPortrait.png; sourceTree = "<group>"; };
+		3B190F4D15F3C65F00929826 /* landscapeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = landscapeBG.png; path = NineMensMorris/Images/landscapeBG.png; sourceTree = "<group>"; };
+		3B190F4E15F3C65F00929826 /* OPportrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OPportrait.png; path = NineMensMorris/Images/OPportrait.png; sourceTree = "<group>"; };
+		3B190F4F15F3C65F00929826 /* OptionsPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OptionsPortrait.png; path = NineMensMorris/Images/OptionsPortrait.png; sourceTree = "<group>"; };
+		3B190F5015F3C65F00929826 /* portraitBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = portraitBG.png; path = NineMensMorris/Images/portraitBG.png; sourceTree = "<group>"; };
+		3B190F5115F3C65F00929826 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = NineMensMorris/Images/white.png; sourceTree = "<group>"; };
+		3B190F5215F3C65F00929826 /* white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "white@2x.png"; path = "NineMensMorris/Images/white@2x.png"; sourceTree = "<group>"; };
+		3B190F5315F3C65F00929826 /* whiteHL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteHL.png; path = NineMensMorris/Images/whiteHL.png; sourceTree = "<group>"; };
+		3B190F5415F3C65F00929826 /* whiteHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "whiteHL@2x.png"; path = "NineMensMorris/Images/whiteHL@2x.png"; sourceTree = "<group>"; };
 		3B41C5A715F0FE160001D2E7 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound1.wav; path = NineMensMorris/Sound/sound1.wav; sourceTree = "<group>"; };
-		3B41C5AA15F0FED30001D2E7 /* OPportrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OPportrait.png; path = NineMensMorris/Images/OPportrait.png; sourceTree = "<group>"; };
-		3B41C5AC15F0FFEE0001D2E7 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = NineMensMorris/Images/button.png; sourceTree = "<group>"; };
 		3B41C5AF15F101490001D2E7 /* UIFont+NMMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+NMMAdditions.h"; sourceTree = "<group>"; };
 		3B41C5B015F101490001D2E7 /* UIFont+NMMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+NMMAdditions.m"; sourceTree = "<group>"; };
 		3B41C5B415F104D10001D2E7 /* UIButton+NMMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NMMAdditions.h"; sourceTree = "<group>"; };
 		3B41C5B515F104D10001D2E7 /* UIButton+NMMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NMMAdditions.m"; sourceTree = "<group>"; };
-		3B41C5B815F106CB0001D2E7 /* buttonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPressed.png; path = NineMensMorris/Images/buttonPressed.png; sourceTree = "<group>"; };
-		3B41C5BA15F124040001D2E7 /* blackHL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackHL.png; path = NineMensMorris/Images/blackHL.png; sourceTree = "<group>"; };
-		3B41C5BB15F124040001D2E7 /* whiteHL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteHL.png; path = NineMensMorris/Images/whiteHL.png; sourceTree = "<group>"; };
 		3B41C5BE15F12B390001D2E7 /* sound3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound3.wav; path = NineMensMorris/Sound/sound3.wav; sourceTree = "<group>"; };
 		3B41C5C015F137480001D2E7 /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Action_Man.ttf; path = Font/Action_Man.ttf; sourceTree = "<group>"; };
 		3B41C5C215F1393A0001D2E7 /* UILabel+NMMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NMMAdditions.h"; sourceTree = "<group>"; };
@@ -144,6 +159,7 @@
 		3B16B6F715E90602000943B0 /* NineMensMorris */ = {
 			isa = PBXGroup;
 			children = (
+				3B41C5B215F1017D0001D2E7 /* Categroies */,
 				3B16B71D15E906CA000943B0 /* NMM.h */,
 				3B16B71E15E906CA000943B0 /* NMM.m */,
 				3B16B70015E90602000943B0 /* NMMAppDelegate.h */,
@@ -162,7 +178,6 @@
 				3B16B70315E90602000943B0 /* NMMViewController.h */,
 				3B16B70415E90602000943B0 /* NMMViewController.m */,
 				3B16B70615E90602000943B0 /* NMMViewController.xib */,
-				3B41C5B215F1017D0001D2E7 /* Categroies */,
 			);
 			path = NineMensMorris;
 			sourceTree = "<group>";
@@ -170,10 +185,10 @@
 		3B16B6F815E90602000943B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B16B6F915E90602000943B0 /* NineMensMorris-Info.plist */,
 				3B41C5C015F137480001D2E7 /* Action_Man.ttf */,
 				3B16B6FA15E90602000943B0 /* InfoPlist.strings */,
 				3B16B6FD15E90602000943B0 /* main.m */,
+				3B16B6F915E90602000943B0 /* NineMensMorris-Info.plist */,
 				3B16B6FF15E90602000943B0 /* NineMensMorris-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -183,15 +198,21 @@
 		3B16B72015E90C01000943B0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				3B16B73215E91C8A000943B0 /* black.png */,
-				3B41C5BA15F124040001D2E7 /* blackHL.png */,
-				3B41C5AC15F0FFEE0001D2E7 /* button.png */,
-				3B41C5B815F106CB0001D2E7 /* buttonPressed.png */,
-				3B16B73315E91C8A000943B0 /* landscapeBG.png */,
-				3B41C5AA15F0FED30001D2E7 /* OPportrait.png */,
-				3B16B73415E91C8A000943B0 /* portraitBG.png */,
-				3B16B73515E91C8A000943B0 /* white.png */,
-				3B41C5BB15F124040001D2E7 /* whiteHL.png */,
+				3B190F4615F3C65F00929826 /* black.png */,
+				3B190F4715F3C65F00929826 /* black@2x.png */,
+				3B190F4815F3C65F00929826 /* blackHL.png */,
+				3B190F4915F3C65F00929826 /* blackHL@2x.png */,
+				3B190F4A15F3C65F00929826 /* button.png */,
+				3B190F4B15F3C65F00929826 /* buttonPressed.png */,
+				3B190F4C15F3C65F00929826 /* InfoPortrait.png */,
+				3B190F4D15F3C65F00929826 /* landscapeBG.png */,
+				3B190F4E15F3C65F00929826 /* OPportrait.png */,
+				3B190F4F15F3C65F00929826 /* OptionsPortrait.png */,
+				3B190F5015F3C65F00929826 /* portraitBG.png */,
+				3B190F5115F3C65F00929826 /* white.png */,
+				3B190F5215F3C65F00929826 /* white@2x.png */,
+				3B190F5315F3C65F00929826 /* whiteHL.png */,
+				3B190F5415F3C65F00929826 /* whiteHL@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -215,6 +236,8 @@
 				3B41C5B515F104D10001D2E7 /* UIButton+NMMAdditions.m */,
 				3B41C5C215F1393A0001D2E7 /* UILabel+NMMAdditions.h */,
 				3B41C5C315F1393A0001D2E7 /* UILabel+NMMAdditions.m */,
+				3B190F2515F3BBF400929826 /* UITextView+NMMAdditions.h */,
+				3B190F2615F3BBF400929826 /* UITextView+NMMAdditions.m */,
 			);
 			name = Categroies;
 			sourceTree = "<group>";
@@ -277,18 +300,24 @@
 				3B16B71715E90691000943B0 /* NMMInfoViewController.xib in Resources */,
 				3B16B71C15E90698000943B0 /* NMMOptionsViewController.xib in Resources */,
 				3B16B73115E91C78000943B0 /* sound0.wav in Resources */,
-				3B16B73615E91C8A000943B0 /* black.png in Resources */,
-				3B16B73715E91C8A000943B0 /* landscapeBG.png in Resources */,
-				3B16B73815E91C8A000943B0 /* portraitBG.png in Resources */,
-				3B16B73915E91C8A000943B0 /* white.png in Resources */,
 				3B41C5A815F0FE160001D2E7 /* sound1.wav in Resources */,
-				3B41C5AB15F0FED30001D2E7 /* OPportrait.png in Resources */,
-				3B41C5AD15F0FFEE0001D2E7 /* button.png in Resources */,
-				3B41C5B915F106CB0001D2E7 /* buttonPressed.png in Resources */,
-				3B41C5BC15F124040001D2E7 /* blackHL.png in Resources */,
-				3B41C5BD15F124040001D2E7 /* whiteHL.png in Resources */,
 				3B41C5BF15F12B390001D2E7 /* sound3.wav in Resources */,
 				3B41C5C115F137480001D2E7 /* Action_Man.ttf in Resources */,
+				3B190F5515F3C65F00929826 /* black.png in Resources */,
+				3B190F5615F3C65F00929826 /* black@2x.png in Resources */,
+				3B190F5715F3C65F00929826 /* blackHL.png in Resources */,
+				3B190F5815F3C65F00929826 /* blackHL@2x.png in Resources */,
+				3B190F5915F3C65F00929826 /* button.png in Resources */,
+				3B190F5A15F3C65F00929826 /* buttonPressed.png in Resources */,
+				3B190F5B15F3C65F00929826 /* InfoPortrait.png in Resources */,
+				3B190F5C15F3C65F00929826 /* landscapeBG.png in Resources */,
+				3B190F5D15F3C65F00929826 /* OPportrait.png in Resources */,
+				3B190F5E15F3C65F00929826 /* OptionsPortrait.png in Resources */,
+				3B190F5F15F3C65F00929826 /* portraitBG.png in Resources */,
+				3B190F6015F3C65F00929826 /* white.png in Resources */,
+				3B190F6115F3C65F00929826 /* white@2x.png in Resources */,
+				3B190F6215F3C65F00929826 /* whiteHL.png in Resources */,
+				3B190F6315F3C65F00929826 /* whiteHL@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +339,7 @@
 				3B41C5B115F101490001D2E7 /* UIFont+NMMAdditions.m in Sources */,
 				3B41C5B615F104D10001D2E7 /* UIButton+NMMAdditions.m in Sources */,
 				3B41C5C415F1393A0001D2E7 /* UILabel+NMMAdditions.m in Sources */,
+				3B190F2715F3BBF400929826 /* UITextView+NMMAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

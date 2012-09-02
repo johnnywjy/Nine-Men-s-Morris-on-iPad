@@ -11,7 +11,7 @@
 
 @implementation UIButton (NMMAdditions)
 
-- (void)nmmApplyButtonStyle
+- (void)applyButtonStyle
 {
     self.titleLabel.font = [UIFont nmmFontWithSize:24.0f];
 	UIImage *buttonImage = [UIImage imageNamed:@"button"];

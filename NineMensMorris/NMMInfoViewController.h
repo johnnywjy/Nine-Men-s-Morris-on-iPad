@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIButton+NMMAdditions.h"
+#import "UILabel+NMMAdditions.h"
+#import "UITextView+NMMAdditions.h"
+
 @class NMMInfoViewController;
 
 @protocol NMMInfoViewControllerDelegate <NSObject>

@@ -66,7 +66,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">portrait</string>
+						<string key="IBUIText">P</string>
 						<object class="NSColor" key="IBUITextColor" id="802367557">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -1029,6 +1029,7 @@
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
+						<float key="IBUIAlpha">0.89999997615814209</float>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -1181,16 +1182,17 @@
 					<object class="IBUILabel" id="914768061">
 						<reference key="NSNextResponder" ref="148457088"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{216, 102}, {79, 21}}</string>
+						<string key="NSFrame">{{20, 20}, {79, 21}}</string>
 						<reference key="NSSuperview" ref="148457088"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
+						<float key="IBUIAlpha">0.10000000149011612</float>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">landscape</string>
+						<string key="IBUIText">L</string>
 						<reference key="IBUITextColor" ref="802367557"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -2731,35 +2733,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">NMMViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="pieceMove:withEvent:">UIButton</string>
-						<string key="pieceTouch:">UIButton</string>
-						<string key="pieceTouchUpInside:">UIButton</string>
-						<string key="returnPressed:">UIButton</string>
-						<string key="touchUpOutside:">UIButton</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="pieceMove:withEvent:">
-							<string key="name">pieceMove:withEvent:</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBActionInfo" key="pieceTouch:">
-							<string key="name">pieceTouch:</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBActionInfo" key="pieceTouchUpInside:">
-							<string key="name">pieceTouchUpInside:</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBActionInfo" key="returnPressed:">
-							<string key="name">returnPressed:</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBActionInfo" key="touchUpOutside:">
-							<string key="name">touchUpOutside:</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="b1">UIButton</string>
 						<string key="b2">UIButton</string>

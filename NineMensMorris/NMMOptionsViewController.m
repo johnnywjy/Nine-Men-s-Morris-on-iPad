@@ -9,14 +9,20 @@
 #import "NMMOptionsViewController.h"
 
 @interface NMMOptionsViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *soundLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *soundSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *flyingLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *flyingSwitch;
+@property (weak, nonatomic) IBOutlet UIButton *returnButton;
 
 @end
 
 @implementation NMMOptionsViewController
-@synthesize soundSwitch;
-@synthesize flyingSwitch;
+@synthesize soundLabel = _soundLabel;
+@synthesize soundSwitch = _soundSwitch;
+@synthesize flyingLabel = _flyingLabel;
+@synthesize flyingSwitch = _flyingSwitch;
+@synthesize returnButton = _returnButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,20 +41,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [_soundLabel applyLabelStyleDefault];
+    [_flyingLabel applyLabelStyleDefault];
+    [_returnButton applyButtonStyle];
+    
     NSString *currentSetting = [NMMSettings getCurrentSettings];
     NSLog(@"sound %c", [currentSetting characterAtIndex:0]);
     NSLog(@"fly %c", [currentSetting characterAtIndex:1]);
     
     if ([currentSetting characterAtIndex:0] == '1') {
-        [soundSwitch setOn:YES];
+        [_soundSwitch setOn:YES];
     }else{
-        [soundSwitch setOn:NO];
+        [_soundSwitch setOn:NO];
     }
     
     if ([currentSetting characterAtIndex:1] == '1') {
-        [flyingSwitch setOn:YES];
+        [_flyingSwitch setOn:YES];
     }else{
-        [flyingSwitch setOn:NO];
+        [_flyingSwitch setOn:NO];
     }
 }
 
@@ -56,6 +66,9 @@
 {
     [self setSoundSwitch:nil];
     [self setFlyingSwitch:nil];
+    [self setSoundLabel:nil];
+    [self setFlyingLabel:nil];
+    [self setReturnButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

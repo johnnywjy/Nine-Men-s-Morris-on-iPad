@@ -10,6 +10,6 @@
 
 @interface UIButton (NMMAdditions)
 
-- (void)nmmApplyButtonStyle;
+- (void)applyButtonStyle;
 
 @end

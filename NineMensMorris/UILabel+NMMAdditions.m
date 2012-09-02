@@ -19,4 +19,11 @@
     self.font = [UIFont nmmFontWithSize:26.0f];
 }
 
+-(void) applyLabelStyleDefault{
+    self.font = [UIFont nmmFontWithSize:32.0f];
+}
+
+-(void)applyLabelStyleWithFontSize:(int)size{
+    self.font = [UIFont nmmFontWithSize:size];
+}
 @end

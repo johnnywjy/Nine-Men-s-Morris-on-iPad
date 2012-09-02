@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "NMMSettings.h"
+#import "UILabel+NMMAdditions.h"
+#import "UIButton+NMMAdditions.h"
 
 @class NMMOptionsViewController;
 

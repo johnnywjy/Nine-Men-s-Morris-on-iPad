@@ -12,5 +12,6 @@
 
 -(void) applyLabelStylePlayer;
 -(void) applyLabelStyleMsg;
-
+-(void) applyLabelStyleDefault;
+-(void)applyLabelStyleWithFontSize:(int)size;
 @end

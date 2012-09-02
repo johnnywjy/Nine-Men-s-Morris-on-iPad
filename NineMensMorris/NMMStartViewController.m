@@ -16,9 +16,9 @@
 @end
 
 @implementation NMMStartViewController
-@synthesize startButton;
-@synthesize optionsButton;
-@synthesize infoButton;
+@synthesize startButton = _startButton;
+@synthesize optionsButton = _optionsButton;
+@synthesize infoButton = _infoButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,9 +54,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self.startButton nmmApplyButtonStyle];
-    [self.optionsButton nmmApplyButtonStyle];
-    [self.infoButton nmmApplyButtonStyle];
+    [_startButton applyButtonStyle];
+    [_optionsButton applyButtonStyle];
+    [_infoButton applyButtonStyle];
 }
 
 - (void)viewDidUnload

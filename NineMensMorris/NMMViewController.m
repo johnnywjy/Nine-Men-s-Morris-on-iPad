@@ -209,9 +209,10 @@
 
     
     //FIXME set auto rotation
-    NSLog(@"viewDidLoad");
-	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+    if (autorotateEnabled) {
+        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+    }
 }
 
 - (void)viewDidUnload
@@ -267,35 +268,6 @@
     [self setReturnButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-}
-
--(void) orientationChanged:(NSNotification *)obj
-{
-    NSLog(@"orientationChanged");
-    UIDeviceOrientation deviceOrientation = [[obj object] orientation];
-    if (deviceOrientation == UIInterfaceOrientationPortrait)
-    {
-        NSLog(@"portrait00");
-        self.view = self.portraitView;
-    }
-    if (deviceOrientation == UIInterfaceOrientationPortraitUpsideDown)
-    {
-        NSLog(@"portrait01");
-        self.view = self.portraitView;
-    }
-    
-    if(deviceOrientation == UIInterfaceOrientationLandscapeLeft)
-    {
-        NSLog(@"landscapeLeft");
-        self.view = self.landscapeView;
-        //self.view = self.portraitView;
-    }
-    if(deviceOrientation == UIInterfaceOrientationLandscapeRight)
-    {
-        NSLog(@"landscapeRight");
-        self.view = self.landscapeView;
-        //self.view = self.portraitView;
-    }
 }
 
 -(IBAction)pieceTouch:(UIButton *)sender{
@@ -468,6 +440,15 @@
     }
 }
 
+-(IBAction)touchUpOutside:(UIButton *)sender{
+    NSLog(@"touchUpOutside");
+    [self moveBack:sender];
+}
+
+- (IBAction)returnPressed:(UIButton *)sender {
+    [self.delegate nmmViewControllerDidCancel:self];
+}
+
 -(void)moveBack:(UIButton *)piece{
     [UIView animateWithDuration:0.2f
                      animations:^{piece.center = originalCenter;
@@ -483,15 +464,6 @@
         return YES;
     }
     return NO;
-}
-
--(IBAction)touchUpOutside:(UIButton *)sender{
-    NSLog(@"touchUpOutside");
-    [self moveBack:sender];
-}
-
-- (IBAction)returnPressed:(UIButton *)sender {
-    [self.delegate nmmViewControllerDidCancel:self];
 }
 
 -(int)getPiecePosition:(UIButton *)piece{
@@ -580,17 +552,6 @@
     AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);
 }
-
-
--(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)orientation duration:(NSTimeInterval)duration {
-    [super willAnimateRotationToInterfaceOrientation:orientation duration:duration];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
 
 -(void)showPiecesCanBeRemoved:(int)colour{
     int offset = 0;
@@ -701,5 +662,44 @@
     NSLog(@"unexpected player value in msgPlayerWin:");
 }
 
+#pragma mark - about orientation
+
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)orientation duration:(NSTimeInterval)duration {
+    [super willAnimateRotationToInterfaceOrientation:orientation duration:duration];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return autorotateSetting;
+}
+
+-(void) orientationChanged:(NSNotification *)obj
+{
+    NSLog(@"orientationChanged");
+    UIDeviceOrientation deviceOrientation = [[obj object] orientation];
+    if (deviceOrientation == UIInterfaceOrientationPortrait)
+    {
+        NSLog(@"portrait00");
+        self.view = self.portraitView;
+    }
+    if (deviceOrientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        NSLog(@"portrait01");
+        self.view = self.portraitView;
+    }
+    
+    if(deviceOrientation == UIInterfaceOrientationLandscapeLeft)
+    {
+        NSLog(@"landscapeLeft");
+        self.view = self.landscapeView;
+        //self.view = self.portraitView;
+    }
+    if(deviceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+        NSLog(@"landscapeRight");
+        self.view = self.landscapeView;
+        //self.view = self.portraitView;
+    }
+}
 
 @end

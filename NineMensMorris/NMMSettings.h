@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#define autorotateSetting (interfaceOrientation == UIInterfaceOrientationPortrait)
+#define autorotateEnabled NO
 
 @interface NMMSettings : NSObject
 

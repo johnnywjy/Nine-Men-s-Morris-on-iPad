@@ -10,6 +10,7 @@
 #import "UIButton+NMMAdditions.h"
 #import "UILabel+NMMAdditions.h"
 #import "UITextView+NMMAdditions.h"
+#import "NMMSettings.h"
 
 @class NMMInfoViewController;
 

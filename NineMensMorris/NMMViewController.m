@@ -10,6 +10,8 @@
 
 #define degreesToRadian(x) (M_PI * (x) / 180.0)
 #define MIN_DISTANCE 40.0f
+#define WHITE_OFFSET 1000
+#define BLACK_OFFSET 2000
 
 @interface NMMViewController (){
     CGPoint originalCenter;
@@ -270,6 +272,8 @@
     // Release any retained subviews of the main view.
 }
 
+#pragma mark - IBActions
+
 -(IBAction)pieceTouch:(UIButton *)sender{
     originalCenter = sender.center;
     if (nmm.phase == MOVING) {
@@ -449,6 +453,12 @@
     [self.delegate nmmViewControllerDidCancel:self];
 }
 
+-(IBAction)testMoveFunction:(UIButton *)sender{
+    [self movePiece:WHITE withTag:4 toPosition:5];
+}
+
+#pragma mark - general functuins
+
 -(void)moveBack:(UIButton *)piece{
     [UIView animateWithDuration:0.2f
                      animations:^{piece.center = originalCenter;
@@ -457,13 +467,6 @@
     if (soundEnabled) {
         [self playSoundReturn];
     }
-}
-
--(BOOL)isWhite:(UIButton *)piece{
-    if (piece.tag<2000) {
-        return YES;
-    }
-    return NO;
 }
 
 -(int)getPiecePosition:(UIButton *)piece{
@@ -488,7 +491,35 @@
                          }
                      }
                      completion:^(BOOL finished){
-                         NSLog(@"place dropped at position %d", pos);
+                         NSLog(@"place dropped at position %d, mode 1", pos);
+                     }
+     ];
+}
+
+//For multi-device game: move a piece to a position
+-(void)movePiece:(int)colour withTag:(int)tag toPosition:(int)pos{
+    int offset;
+    if (colour == WHITE) {
+        offset = WHITE_OFFSET;
+    }
+    else if (colour == BLACK) {
+        offset = BLACK_OFFSET;
+    }
+    else{
+        NSLog(@"unexpected colour in movePiece:withTag:toPosition:");
+    }
+    int pieceTag = tag + offset;
+    UIButton * piece = (UIButton *)[self.view viewWithTag:pieceTag];
+    [UIView animateWithDuration:0.3f
+                     animations:^{
+                         UIButton *p = (UIButton *)[self.view viewWithTag:pos+1]; // tag is pos +1
+                         piece.center = p.center;
+                         if (soundEnabled) {
+                             [self playSoundPieceDrop];
+                         }
+                     }
+                     completion:^(BOOL finished){
+                         NSLog(@"place dropped at position %d, mode 2", pos);
                      }
      ];
 }
@@ -509,6 +540,14 @@
      ];
 }
 
+
+-(BOOL)isWhite:(UIButton *)piece{
+    if (piece.tag<BLACK_OFFSET) {
+        return YES;
+    }
+    return NO;
+}
+
 -(BOOL)isClose:(UIButton *)button1 to:(UIButton *)button2{
     return [self pointClose:button1.center to:button2];
 }
@@ -520,6 +559,8 @@
     }
     return NO;
 }
+
+#pragma mark - play sounds
 
 -(void)playSoundPieceDrop{
     CFBundleRef mainBundle = CFBundleGetMainBundle();
@@ -553,14 +594,16 @@
     AudioServicesPlaySystemSound(soundID);
 }
 
+#pragma mark - about display
+
 -(void)showPiecesCanBeRemoved:(int)colour{
     int offset = 0;
     NSString *pieceHL;
     if (colour == WHITE) {
-        offset = 1000;
+        offset = WHITE_OFFSET;
         pieceHL = @"whiteHL.png";
     }else if (colour == BLACK) {
-        offset = 2000;
+        offset = BLACK_OFFSET;
         pieceHL = @"blackHL.png";
     }else{
         NSLog(@"unexpected colour in showPiecesCanBeRemoved:");
@@ -583,10 +626,10 @@
     int offset = 0;
     NSString *pieceImg;
     if (colour == WHITE) {
-        offset = 1000;
+        offset = WHITE_OFFSET;
         pieceImg = @"white.png";
     }else if (colour == BLACK) {
-        offset = 2000;
+        offset = BLACK_OFFSET;
         pieceImg = @"black.png";
     }else{
         NSLog(@"unexpected colour in showPiecesNormal:");

@@ -163,6 +163,7 @@ dGhlIGdhbWUgaXMgcGxheWVkLCBzb21lIHRyZWF0IGl0IGFzIGEgdmFyaWF0aW9uLCBhbmQgc29tZSBk
 b24ndCBtZW50aW9uIGl0IGF0IGFsbC4gQSAnMTl0aCBDZW50dXJ5IEdhbWVzIE1hbnVhbCcgY2FsbHMg
 dGhpcyB0aGUgInRydWx5IHJ1c3RpYyBtb2RlIG9mIHBsYXlpbmcgdGhlIGdhbWUiLg</bytes>
 						</object>
+						<reference key="IBUITextColor" ref="271191819"/>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -220,6 +221,7 @@ cyBpbiBFbmdsaXNoLiBUaGlzIGdhbWUgaXMgYWxzbyBrbm93biBhcyAiQ293Ym95IENoZWNrZXJzIiBh
 bmQgd2FzIG9uY2UgcHJpbnRlZCBvbiB0aGUgYmFjayBvZiBjaGVja2VyYm9hcmRzLgpWYXJpYW50cyBv
 ZiBOaW5lIE1lbidzIE1vcnJpcyBpbmNsdWRlIFRocmVlIE1lbidzIE1vcnJpcywgU2l4IE1lbidzIE1v
 cnJpcywgYW5kIFR3ZWx2ZSBNZW4ncyBNb3JyaXMuA</string>
+						<reference key="IBUITextColor" ref="271191819"/>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

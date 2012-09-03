@@ -15,7 +15,7 @@
 
 @interface NMMViewController (){
     CGPoint originalCenter;
-    UIButton *currentPiece;
+    NMMPiece *currentPiece;
     BOOL soundEnabled;
     BOOL removing;
     BOOL rotateP2Msg;
@@ -36,50 +36,50 @@
 @property (weak, nonatomic) IBOutlet UILabel *p2msg;
 @property (weak, nonatomic) IBOutlet UIButton *returnButton;
 
-@property (weak, nonatomic) IBOutlet UIButton *w1;
-@property (weak, nonatomic) IBOutlet UIButton *w2;
-@property (weak, nonatomic) IBOutlet UIButton *w3;
-@property (weak, nonatomic) IBOutlet UIButton *w4;
-@property (weak, nonatomic) IBOutlet UIButton *w5;
-@property (weak, nonatomic) IBOutlet UIButton *w6;
-@property (weak, nonatomic) IBOutlet UIButton *w7;
-@property (weak, nonatomic) IBOutlet UIButton *w8;
-@property (weak, nonatomic) IBOutlet UIButton *w9;
+@property (weak, nonatomic) IBOutlet NMMPiece *w1;
+@property (weak, nonatomic) IBOutlet NMMPiece *w2;
+@property (weak, nonatomic) IBOutlet NMMPiece *w3;
+@property (weak, nonatomic) IBOutlet NMMPiece *w4;
+@property (weak, nonatomic) IBOutlet NMMPiece *w5;
+@property (weak, nonatomic) IBOutlet NMMPiece *w6;
+@property (weak, nonatomic) IBOutlet NMMPiece *w7;
+@property (weak, nonatomic) IBOutlet NMMPiece *w8;
+@property (weak, nonatomic) IBOutlet NMMPiece *w9;
 
-@property (weak, nonatomic) IBOutlet UIButton *b1;
-@property (weak, nonatomic) IBOutlet UIButton *b2;
-@property (weak, nonatomic) IBOutlet UIButton *b3;
-@property (weak, nonatomic) IBOutlet UIButton *b4;
-@property (weak, nonatomic) IBOutlet UIButton *b5;
-@property (weak, nonatomic) IBOutlet UIButton *b6;
-@property (weak, nonatomic) IBOutlet UIButton *b7;
-@property (weak, nonatomic) IBOutlet UIButton *b8;
-@property (weak, nonatomic) IBOutlet UIButton *b9;
+@property (weak, nonatomic) IBOutlet NMMPiece *b1;
+@property (weak, nonatomic) IBOutlet NMMPiece *b2;
+@property (weak, nonatomic) IBOutlet NMMPiece *b3;
+@property (weak, nonatomic) IBOutlet NMMPiece *b4;
+@property (weak, nonatomic) IBOutlet NMMPiece *b5;
+@property (weak, nonatomic) IBOutlet NMMPiece *b6;
+@property (weak, nonatomic) IBOutlet NMMPiece *b7;
+@property (weak, nonatomic) IBOutlet NMMPiece *b8;
+@property (weak, nonatomic) IBOutlet NMMPiece *b9;
 
-@property (weak, nonatomic) IBOutlet UIButton *pos0;
-@property (weak, nonatomic) IBOutlet UIButton *pos1;
-@property (weak, nonatomic) IBOutlet UIButton *pos2;
-@property (weak, nonatomic) IBOutlet UIButton *pos3;
-@property (weak, nonatomic) IBOutlet UIButton *pos4;
-@property (weak, nonatomic) IBOutlet UIButton *pos5;
-@property (weak, nonatomic) IBOutlet UIButton *pos6;
-@property (weak, nonatomic) IBOutlet UIButton *pos7;
-@property (weak, nonatomic) IBOutlet UIButton *pos8;
-@property (weak, nonatomic) IBOutlet UIButton *pos9;
-@property (weak, nonatomic) IBOutlet UIButton *pos10;
-@property (weak, nonatomic) IBOutlet UIButton *pos11;
-@property (weak, nonatomic) IBOutlet UIButton *pos12;
-@property (weak, nonatomic) IBOutlet UIButton *pos13;
-@property (weak, nonatomic) IBOutlet UIButton *pos14;
-@property (weak, nonatomic) IBOutlet UIButton *pos15;
-@property (weak, nonatomic) IBOutlet UIButton *pos16;
-@property (weak, nonatomic) IBOutlet UIButton *pos17;
-@property (weak, nonatomic) IBOutlet UIButton *pos18;
-@property (weak, nonatomic) IBOutlet UIButton *pos19;
-@property (weak, nonatomic) IBOutlet UIButton *pos20;
-@property (weak, nonatomic) IBOutlet UIButton *pos21;
-@property (weak, nonatomic) IBOutlet UIButton *pos22;
-@property (weak, nonatomic) IBOutlet UIButton *pos23;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos0;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos1;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos2;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos3;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos4;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos5;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos6;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos7;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos8;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos9;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos10;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos11;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos12;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos13;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos14;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos15;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos16;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos17;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos18;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos19;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos20;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos21;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos22;
+@property (weak, nonatomic) IBOutlet NMMPosition *pos23;
 
 @end
 
@@ -274,7 +274,7 @@
 
 #pragma mark - IBActions
 
--(IBAction)pieceTouch:(UIButton *)sender{
+-(IBAction)pieceTouch:(NMMPiece *)sender{
     originalCenter = sender.center;
     if (nmm.phase == MOVING) {
         moveStartPosition = [self getPiecePosition:sender];
@@ -282,7 +282,7 @@
     }
 }
 
--(IBAction)pieceMove:(UIButton *)sender withEvent:(UIEvent *) event{
+-(IBAction)pieceMove:(NMMPiece *)sender withEvent:(UIEvent *) event{
     if (nmm.phase != REMOVING && nmm.phase != ENDING) {
         CGPoint point = [[[event allTouches]anyObject] locationInView:self.view];
         //[button setImage:[UIImage imageNamed: @"blackHL.png"] forState:UIControlStateNormal];
@@ -290,7 +290,7 @@
     }
 }
 
--(IBAction)pieceTouchUpInside:(UIButton *)sender{
+-(IBAction)pieceTouchUpInside:(NMMPiece *)sender{
     int pos = [self getPiecePosition:sender];
     if (pos == -1) {
         [self moveBack:sender];
@@ -300,13 +300,12 @@
     switch (nmm.phase) {
         case PLACING:
             //can't move pieces in board
-            for (int i = 1 ; i<25; i++) {
-                UIButton * b = (UIButton *)[self.view viewWithTag:i];
-                if ([self pointClose:originalCenter to:b]) {
-                    [self moveBack:sender];
-                    return;
-                }
+            if (sender.isOnBoard) {
+                [self moveBack:sender];
+                return;
             }
+
+            
             if ([nmm whiteTurn]) {//white
                 if ([self isWhite:sender]) {
                     if ([nmm placePieceWithColour:WHITE atPosition:pos]) {
@@ -350,7 +349,7 @@
             if ([nmm whiteTurn]) {
                 if (![self isWhite:sender]) {
                     if ([nmm removePieceAtPosition:pos]) {
-                        [self removePieceAnimated:sender];
+                        [self removePieceAnimated:sender atPosition:pos];
                         [self showPiecesNormal:BLACK];
                         if (nmm.phase == ENDING) {
                             [self msgPlayerWin:WHITE];
@@ -369,7 +368,7 @@
             else{//black
                 if ([self isWhite:sender]) {
                     if ([nmm removePieceAtPosition:pos]) {
-                        [self removePieceAnimated:sender];
+                        [self removePieceAnimated:sender atPosition:pos];
                         [self showPiecesNormal:WHITE];
                         if (nmm.phase == ENDING) {
                             [self msgPlayerWin:BLACK];
@@ -489,10 +488,11 @@
     }
 }
 
--(int)getPiecePosition:(UIButton *)piece{
+-(int)getPiecePosition:(NMMPiece *)piece{
+    //notice this function returns the new position of the piece
     int pos = -1;
     for (int i = 1; i<25; i++) {
-        UIButton * b = (UIButton *)[self.view viewWithTag:i];
+        NMMPosition * b = (NMMPosition *)[self.view viewWithTag:i];
         if ([self isClose:piece to:b]) {
             pos = i-1;
             break;
@@ -501,16 +501,27 @@
     return pos;
 }
 
--(void)dropPieceAnimated:(UIButton *)piece atPosition:(int)pos{
+-(NMMPosition *)getPositionFromNumber:(int)pos{
+    return (NMMPosition *)[self.view viewWithTag:pos+1]; //tag of NMMPosition start from 1, nmm board start from 0
+}
+
+-(NMMPiece *)getPieceFromNumber:(int)tag{
+  return (NMMPiece *)[self.view viewWithTag:tag];
+}
+
+-(void)dropPieceAnimated:(NMMPiece *)piece atPosition:(int)pos{
+    NMMPosition *p = [self getPositionFromNumber:pos];
     [UIView animateWithDuration:0.3f
                      animations:^{
-                         UIButton *p = (UIButton *)[self.view viewWithTag:pos+1]; // tag is pos +1
                          piece.center = p.center;
                          if (soundEnabled) {
                              [self playSoundPieceDrop];
                          }
                      }
                      completion:^(BOOL finished){
+                         piece.isOnBoard = YES;
+                         piece.positionOnBoard = pos;
+                         p.pieceOnPosition = piece;
                          NSLog(@"place dropped at position %d, mode 1", pos);
                      }
      ];
@@ -529,10 +540,10 @@
         NSLog(@"unexpected colour in movePiece:withTag:toPosition:");
     }
     int pieceTag = tag + offset;
-    UIButton * piece = (UIButton *)[self.view viewWithTag:pieceTag];
+    NMMPiece * piece = [self getPieceFromNumber:pieceTag];
+    NMMPosition *p = [self getPositionFromNumber:pos];
     [UIView animateWithDuration:0.3f
                      animations:^{
-                         UIButton *p = (UIButton *)[self.view viewWithTag:pos+1]; // tag is pos +1
                          piece.center = p.center;
                          if (soundEnabled) {
                              [self playSoundPieceDrop];
@@ -544,7 +555,8 @@
      ];
 }
 
--(void)removePieceAnimated:(UIButton *)sender{
+-(void)removePieceAnimated:(NMMPiece *)sender atPosition:(int)pos{
+    NMMPosition *p = [self getPositionFromNumber:pos];
     [UIView animateWithDuration:0.3f delay:0.0
                         options:UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
@@ -555,13 +567,16 @@
                      }completion:^(BOOL finished){
                          [sender setImage:nil forState:UIControlStateNormal];
                          [sender setEnabled:NO];
+                         sender.positionOnBoard = -1;
+                         sender.isOnBoard = NO;
+                         p.pieceOnPosition = nil;
                          NSLog(@"removePieceAnimated done");
                      }
      ];
 }
 
 
--(BOOL)isWhite:(UIButton *)piece{
+-(BOOL)isWhite:(NMMPiece *)piece{
     if (piece.tag<BLACK_OFFSET) {
         return YES;
     }
@@ -630,14 +645,9 @@
     }
     for (int pos=0; pos<24; pos++) {
         if ([nmm getPosition:pos] == colour && [nmm canRemovePieceAtPosition:pos]) {
-            CGPoint posCenter = ((UIButton *)[self.view viewWithTag:pos+1]).center;
-            for (int pieceNo=1; pieceNo<10; pieceNo++) {
-                int pieceTag = pieceNo+offset;
-                UIButton *piece = (UIButton *)[self.view viewWithTag:pieceTag];
-                if ([piece isEnabled] && [self pointClose:posCenter to:piece]) {
-                    [piece setImage:[UIImage imageNamed:pieceHL] forState:UIControlStateNormal];
-                }
-            }
+            NMMPosition *position = [self getPositionFromNumber:pos];
+            NMMPiece *piece = position.pieceOnPosition;
+            [piece setImage:[UIImage imageNamed:pieceHL] forState:UIControlStateNormal];
         }
     }
 }
@@ -656,14 +666,9 @@
     }
     for (int pos=0; pos<24; pos++) {
         if ([nmm getPosition:pos] == colour) {
-            CGPoint posCenter = ((UIButton *)[self.view viewWithTag:pos+1]).center;
-            for (int pieceNo=1; pieceNo<10; pieceNo++) {
-                int pieceTag = pieceNo+offset;
-                UIButton *piece = (UIButton *)[self.view viewWithTag:pieceTag];
-                if ([piece isEnabled] && [self pointClose:posCenter to:piece]) {
-                    [piece setImage:[UIImage imageNamed:pieceImg] forState:UIControlStateNormal];
-                }
-            }
+            NMMPosition *position = [self getPositionFromNumber:pos];
+            NMMPiece *piece = position.pieceOnPosition;
+            [piece setImage:[UIImage imageNamed:pieceImg] forState:UIControlStateNormal];
         }
     }
 }

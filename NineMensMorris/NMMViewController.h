@@ -6,6 +6,8 @@
 #import "NMMSettings.h"
 #import "UIButton+NMMAdditions.h"
 #import "UILabel+NMMAdditions.h"
+#import "NMMPiece.h"
+#import "NMMPosition.h"
 
 @class NMMViewController;
 

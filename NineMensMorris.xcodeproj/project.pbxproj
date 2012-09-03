@@ -42,6 +42,7 @@
 		3B190F6115F3C65F00929826 /* white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F5215F3C65F00929826 /* white@2x.png */; };
 		3B190F6215F3C65F00929826 /* whiteHL.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F5315F3C65F00929826 /* whiteHL.png */; };
 		3B190F6315F3C65F00929826 /* whiteHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F5415F3C65F00929826 /* whiteHL@2x.png */; };
+		3B190F8115F431FA00929826 /* sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F8015F431FA00929826 /* sound2.wav */; };
 		3B41C5A815F0FE160001D2E7 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C5A715F0FE160001D2E7 /* sound1.wav */; };
 		3B41C5B115F101490001D2E7 /* UIFont+NMMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C5B015F101490001D2E7 /* UIFont+NMMAdditions.m */; };
 		3B41C5B615F104D10001D2E7 /* UIButton+NMMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C5B515F104D10001D2E7 /* UIButton+NMMAdditions.m */; };
@@ -97,6 +98,7 @@
 		3B190F5215F3C65F00929826 /* white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "white@2x.png"; path = "NineMensMorris/Images/white@2x.png"; sourceTree = "<group>"; };
 		3B190F5315F3C65F00929826 /* whiteHL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteHL.png; path = NineMensMorris/Images/whiteHL.png; sourceTree = "<group>"; };
 		3B190F5415F3C65F00929826 /* whiteHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "whiteHL@2x.png"; path = "NineMensMorris/Images/whiteHL@2x.png"; sourceTree = "<group>"; };
+		3B190F8015F431FA00929826 /* sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound2.wav; path = NineMensMorris/Sound/sound2.wav; sourceTree = "<group>"; };
 		3B41C5A715F0FE160001D2E7 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound1.wav; path = NineMensMorris/Sound/sound1.wav; sourceTree = "<group>"; };
 		3B41C5AF15F101490001D2E7 /* UIFont+NMMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+NMMAdditions.h"; sourceTree = "<group>"; };
 		3B41C5B015F101490001D2E7 /* UIFont+NMMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+NMMAdditions.m"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				3B16B73015E91C78000943B0 /* sound0.wav */,
 				3B41C5BE15F12B390001D2E7 /* sound3.wav */,
+				3B190F8015F431FA00929826 /* sound2.wav */,
 				3B41C5A715F0FE160001D2E7 /* sound1.wav */,
 			);
 			name = Sound;
@@ -318,6 +321,7 @@
 				3B190F6115F3C65F00929826 /* white@2x.png in Resources */,
 				3B190F6215F3C65F00929826 /* whiteHL.png in Resources */,
 				3B190F6315F3C65F00929826 /* whiteHL@2x.png in Resources */,
+				3B190F8115F431FA00929826 /* sound2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

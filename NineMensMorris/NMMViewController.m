@@ -521,9 +521,20 @@
      ];
 }
 
--(void)removePieceAnimated:(UIButton *)sender{//TODO animation
-    [sender setImage:nil forState:UIControlStateNormal];
-    [sender setEnabled:NO];
+-(void)removePieceAnimated:(UIButton *)sender{
+    [UIView animateWithDuration:0.3f delay:0.0
+                        options:UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         [sender setAlpha:0];
+                         if (soundEnabled) {
+                             [self playSoundRemove];
+                         }
+                     }completion:^(BOOL finished){
+                         [sender setImage:nil forState:UIControlStateNormal];
+                         [sender setEnabled:NO];
+                         NSLog(@"removePieceAnimated done");
+                     }
+     ];
 }
 
 -(BOOL)isClose:(UIButton *)button1 to:(UIButton *)button2{
@@ -549,6 +560,14 @@
 -(void)playSoundReturn{
     CFBundleRef mainBundle = CFBundleGetMainBundle();
     CFURLRef soundURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)@"sound1" , CFSTR("wav"), nil);
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+}
+
+-(void)playSoundRemove{
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef soundURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)@"sound2" , CFSTR("wav"), nil);
     UInt32 soundID;
     AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);

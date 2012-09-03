@@ -453,9 +453,29 @@
     [self.delegate nmmViewControllerDidCancel:self];
 }
 
+
+
 -(IBAction)testMoveFunction:(UIButton *)sender{
-    [self movePiece:WHITE withTag:4 toPosition:5];
+    //TODO rewrite it in multi device game
+    
+    //random move
+    int tag = -1;
+    int pos = -1;
+    tag = arc4random()%9 + 1;
+   
+    NSLog(@"tag = %d", tag);
+    
+    while (pos == -1 || [nmm getPosition:pos]!=NONE) {
+        pos = arc4random()%24;
+    }
+    NSLog(@"pos = %d", pos);
+    
+    [self movePiece:BLACK withTag:tag toPosition:pos];
+    [nmm placePieceWithColour:BLACK atPosition:pos];
 }
+
+
+
 
 #pragma mark - general functuins
 

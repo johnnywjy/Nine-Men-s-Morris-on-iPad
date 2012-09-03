@@ -527,11 +527,7 @@
 }
 
 -(BOOL)isClose:(UIButton *)button1 to:(UIButton *)button2{
-    CGFloat d = MIN_DISTANCE;//min distance
-    if (abs(button1.center.x - button2.center.x) < d && abs(button1.center.y - button2.center.y) < d) {
-        return YES;
-    }
-    return NO;
+    return [self pointClose:button1.center to:button2];
 }
 
 -(BOOL)pointClose:(CGPoint)point to:(UIButton *)button{

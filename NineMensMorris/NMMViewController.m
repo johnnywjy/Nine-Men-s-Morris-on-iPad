@@ -12,6 +12,7 @@
 #define MIN_DISTANCE 40.0f
 #define WHITE_OFFSET 1000
 #define BLACK_OFFSET 2000
+#define ANIMATION_DURATION 0.3f
 
 @interface NMMViewController (){
     CGPoint originalCenter;
@@ -479,7 +480,7 @@
 #pragma mark - general functuins
 
 -(void)moveBack:(UIButton *)piece{
-    [UIView animateWithDuration:0.2f
+    [UIView animateWithDuration:ANIMATION_DURATION
                      animations:^{piece.center = originalCenter;
                      }
      ];
@@ -511,7 +512,7 @@
 
 -(void)dropPieceAnimated:(NMMPiece *)piece atPosition:(int)pos{
     NMMPosition *p = [self getPositionFromNumber:pos];
-    [UIView animateWithDuration:0.3f
+    [UIView animateWithDuration:ANIMATION_DURATION
                      animations:^{
                          piece.center = p.center;
                          if (soundEnabled) {
@@ -542,7 +543,7 @@
     int pieceTag = tag + offset;
     NMMPiece * piece = [self getPieceFromNumber:pieceTag];
     NMMPosition *p = [self getPositionFromNumber:pos];
-    [UIView animateWithDuration:0.3f
+    [UIView animateWithDuration:ANIMATION_DURATION
                      animations:^{
                          piece.center = p.center;
                          if (soundEnabled) {
@@ -557,7 +558,7 @@
 
 -(void)removePieceAnimated:(NMMPiece *)sender atPosition:(int)pos{
     NMMPosition *p = [self getPositionFromNumber:pos];
-    [UIView animateWithDuration:0.3f delay:0.0
+    [UIView animateWithDuration:ANIMATION_DURATION delay:0.0
                         options:UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          [sender setAlpha:0];

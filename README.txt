@@ -1,0 +1,3 @@
+Nine Men's Morris is an abstract strategy board game for two players that emerged from the Roman Empire. Each player has nine pieces, or "men", which move among the board's twenty-four spots. The object of the game is to leave the opposing player with fewer than three pieces or, as in checkers, no legal moves. A number of variants of the game exist, including 12-Mens Morris, Shax (Somalian) and Square Chess (from northwest China and Xinjiang).
+
+The aim of the project is to implement a version of Nine Mens Morris on an iPad, allowing two players to take turns in playing the game.

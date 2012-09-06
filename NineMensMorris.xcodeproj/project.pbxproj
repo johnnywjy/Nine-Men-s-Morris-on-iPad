@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3B04939C15F54A3F00359708 /* NMMPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04939B15F54A3F00359708 /* NMMPiece.m */; };
-		3B0493A015F54A4F00359708 /* NMMPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04939F15F54A4F00359708 /* NMMPosition.m */; };
 		3B0493A615F5783200359708 /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0493A515F5783200359708 /* icon72.png */; };
 		3B0493A815F578AB00359708 /* icon144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0493A715F578AB00359708 /* icon144.png */; };
 		3B16B6F215E90602000943B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16B6F115E90602000943B0 /* UIKit.framework */; };
@@ -58,8 +57,6 @@
 /* Begin PBXFileReference section */
 		3B04939A15F54A3F00359708 /* NMMPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMPiece.h; sourceTree = "<group>"; };
 		3B04939B15F54A3F00359708 /* NMMPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMPiece.m; sourceTree = "<group>"; };
-		3B04939E15F54A4F00359708 /* NMMPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMPosition.h; sourceTree = "<group>"; };
-		3B04939F15F54A4F00359708 /* NMMPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMPosition.m; sourceTree = "<group>"; };
 		3B0493A515F5783200359708 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon72.png; sourceTree = "<group>"; };
 		3B0493A715F578AB00359708 /* icon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon144.png; sourceTree = "<group>"; };
 		3B16B6ED15E90602000943B0 /* NineMensMorris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineMensMorris.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,8 +181,6 @@
 				3B16B71A15E90698000943B0 /* NMMOptionsViewController.xib */,
 				3B04939A15F54A3F00359708 /* NMMPiece.h */,
 				3B04939B15F54A3F00359708 /* NMMPiece.m */,
-				3B04939E15F54A4F00359708 /* NMMPosition.h */,
-				3B04939F15F54A4F00359708 /* NMMPosition.m */,
 				3B16B73E15E936A2000943B0 /* NMMSettings.h */,
 				3B16B73F15E936A2000943B0 /* NMMSettings.m */,
 				3B16B70E15E90626000943B0 /* NMMStartViewController.h */,
@@ -363,7 +358,6 @@
 				3B41C5C415F1393A0001D2E7 /* UILabel+NMMAdditions.m in Sources */,
 				3B190F2715F3BBF400929826 /* UITextView+NMMAdditions.m in Sources */,
 				3B04939C15F54A3F00359708 /* NMMPiece.m in Sources */,
-				3B0493A015F54A4F00359708 /* NMMPosition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,23 @@
 #define BLACK_OFFSET 2000
 #define ANIMATION_DURATION 0.3f
 
+//coordinates L1R1 = Layer 1 (biggest ring) row 1, L3C2 = layer 3 column 2
+#define L1R1 197.0
+#define L1C1 81.0
+#define L2R1 292.0
+#define L2C1 181.0
+#define L3R1 389.0
+#define L3C1 280.0
+#define L1R3 779.0
+#define L1C3 677.0
+#define L2R3 681.0
+#define L2C3 576.0
+#define L3R3 585.0
+#define L3C3 478.0
+//all rings/layers share column 2 and row 2
+#define R2 486.0
+#define C2 379.0
+
 @interface NMMViewController (){
     CGPoint originalCenter;
     NMMPiece *currentPiece;
@@ -29,6 +46,34 @@
     NSString *nmmMove;
     NSString *nmmWin;
     NSString *nmmLose;
+
+    CGPoint p0;
+    CGPoint p1;
+    CGPoint p2;
+    CGPoint p3;
+    CGPoint p4;
+    CGPoint p5;
+    CGPoint p6;
+    CGPoint p7;
+    CGPoint p8;
+    CGPoint p9;
+    CGPoint p10;
+    CGPoint p11;
+    CGPoint p12;
+    CGPoint p13;
+    CGPoint p14;
+    CGPoint p15;
+    CGPoint p16;
+    CGPoint p17;
+    CGPoint p18;
+    CGPoint p19;
+    CGPoint p20;
+    CGPoint p21;
+    CGPoint p22;
+    CGPoint p23;
+    
+    NSArray *positions;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *p1label;
@@ -57,31 +102,6 @@
 @property (weak, nonatomic) IBOutlet NMMPiece *b8;
 @property (weak, nonatomic) IBOutlet NMMPiece *b9;
 
-@property (weak, nonatomic) IBOutlet NMMPosition *pos0;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos1;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos2;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos3;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos4;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos5;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos6;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos7;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos8;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos9;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos10;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos11;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos12;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos13;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos14;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos15;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos16;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos17;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos18;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos19;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos20;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos21;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos22;
-@property (weak, nonatomic) IBOutlet NMMPosition *pos23;
-
 @end
 
 @implementation NMMViewController
@@ -108,30 +128,6 @@
 @synthesize b7 = _b7;
 @synthesize b8 = _b8;
 @synthesize b9 = _b9;
-@synthesize pos0 = _pos0;
-@synthesize pos1 = _pos1;
-@synthesize pos2 = _pos2;
-@synthesize pos3 = _pos3;
-@synthesize pos4 = _pos4;
-@synthesize pos5 = _pos5;
-@synthesize pos6 = _pos6;
-@synthesize pos7 = _pos7;
-@synthesize pos8 = _pos8;
-@synthesize pos9 = _pos9;
-@synthesize pos10 = _pos10;
-@synthesize pos11 = _pos11;
-@synthesize pos12 = _pos12;
-@synthesize pos13 = _pos13;
-@synthesize pos14 = _pos14;
-@synthesize pos15 = _pos15;
-@synthesize pos16 = _pos16;
-@synthesize pos17 = _pos17;
-@synthesize pos18 = _pos18;
-@synthesize pos19 = _pos19;
-@synthesize pos20 = _pos20;
-@synthesize pos21 = _pos21;
-@synthesize pos22 = _poa22;
-@synthesize pos23 = _pos23;
 @synthesize portraitView = _portraitView;
 @synthesize landscapeView = _landscapeView;
 
@@ -183,6 +179,63 @@
     [_b7 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
     [_b8 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
     [_b9 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
+    
+    
+    //init coordinates
+    p0 = CGPointMake(L1C1, L1R1);
+    p1 = CGPointMake(C2, L1R1);
+    p2 = CGPointMake(L1C3, L1R1);
+    p3 = CGPointMake(L1C3, R2);
+    p4 = CGPointMake(L1C3, L1R3);
+    p5 = CGPointMake(C2, L1R3);
+    p6 = CGPointMake(L1C1, L1R3);
+    p7 = CGPointMake(L1C1, R2);
+    
+    p8 = CGPointMake(L2C1, L2R1);
+    p9 = CGPointMake(C2, L2R1);
+    p10 = CGPointMake(L2C3, L2R1);
+    p11 = CGPointMake(L2C3, R2);
+    p12 = CGPointMake(L2C3, L2R3);
+    p13 = CGPointMake(C2, L2R3);
+    p14 = CGPointMake(L2C1, L2R3);
+    p15 = CGPointMake(L2C1, R2);
+    
+    p16 = CGPointMake(L3C1, L3R1);
+    p17 = CGPointMake(C2, L3R1);
+    p18 = CGPointMake(L3C3, L3R1);
+    p19 = CGPointMake(L3C3, R2);
+    p20 = CGPointMake(L3C3, L3R3);
+    p21 = CGPointMake(C2, L3R3);
+    p22 = CGPointMake(L3C1, L3R3);
+    p23 = CGPointMake(L3C1, R2);
+    
+    //add position points into NSArray
+    positions = [NSArray arrayWithObjects:
+                 [NSValue valueWithCGPoint:p0],
+                 [NSValue valueWithCGPoint:p1],
+                 [NSValue valueWithCGPoint:p2],
+                 [NSValue valueWithCGPoint:p3],
+                 [NSValue valueWithCGPoint:p4],
+                 [NSValue valueWithCGPoint:p5],
+                 [NSValue valueWithCGPoint:p6],
+                 [NSValue valueWithCGPoint:p7],
+                 [NSValue valueWithCGPoint:p8],
+                 [NSValue valueWithCGPoint:p9],
+                 [NSValue valueWithCGPoint:p10],
+                 [NSValue valueWithCGPoint:p11],
+                 [NSValue valueWithCGPoint:p12],
+                 [NSValue valueWithCGPoint:p13],
+                 [NSValue valueWithCGPoint:p14],
+                 [NSValue valueWithCGPoint:p15],
+                 [NSValue valueWithCGPoint:p16],
+                 [NSValue valueWithCGPoint:p17],
+                 [NSValue valueWithCGPoint:p18],
+                 [NSValue valueWithCGPoint:p19],
+                 [NSValue valueWithCGPoint:p20],
+                 [NSValue valueWithCGPoint:p21],
+                 [NSValue valueWithCGPoint:p22],
+                 [NSValue valueWithCGPoint:p23],
+                 nil];
     
     //set Label/Button style
     [_returnButton applyButtonStyle];
@@ -240,30 +293,6 @@
     [self setB7:nil];
     [self setB8:nil];
     [self setB9:nil];
-    [self setPos0:nil];
-    [self setPos1:nil];
-    [self setPos2:nil];
-    [self setPos3:nil];
-    [self setPos4:nil];
-    [self setPos5:nil];
-    [self setPos6:nil];
-    [self setPos7:nil];
-    [self setPos8:nil];
-    [self setPos9:nil];
-    [self setPos10:nil];
-    [self setPos11:nil];
-    [self setPos12:nil];
-    [self setPos13:nil];
-    [self setPos14:nil];
-    [self setPos15:nil];
-    [self setPos16:nil];
-    [self setPos17:nil];
-    [self setPos18:nil];
-    [self setPos19:nil];
-    [self setPos20:nil];
-    [self setPos21:nil];
-    [self setPos22:nil];
-    [self setPos23:nil];
     [self setP1msg:nil];
     [self setP2msg:nil];
     [self setP1label:nil];
@@ -492,18 +521,18 @@
 -(int)getPiecePosition:(NMMPiece *)piece{
     //notice this function returns the new position of the piece
     int pos = -1;
-    for (int i = 1; i<25; i++) {
-        NMMPosition * b = (NMMPosition *)[self.view viewWithTag:i];
-        if ([self isClose:piece to:b]) {
-            pos = i-1;
+    for (int i = 0; i<24; i++) {
+        CGPoint position = [(NSValue *)[positions objectAtIndex:i] CGPointValue];
+        if ([self pointClose:position to:piece]) {
+            pos = i;
             break;
         }
     }
     return pos;
 }
 
--(NMMPosition *)getPositionFromNumber:(int)pos{
-    return (NMMPosition *)[self.view viewWithTag:pos+1]; //tag of NMMPosition start from 1, nmm board start from 0
+-(CGPoint)getPositionFromNumber:(int)pos{
+    return  [(NSValue *)[positions objectAtIndex:pos] CGPointValue];
 }
 
 -(NMMPiece *)getPieceFromNumber:(int)tag{
@@ -511,10 +540,11 @@
 }
 
 -(void)dropPieceAnimated:(NMMPiece *)piece atPosition:(int)pos{
-    NMMPosition *p = [self getPositionFromNumber:pos];
+    CGPoint position = [self getPositionFromNumber:pos];
+
     [UIView animateWithDuration:ANIMATION_DURATION
                      animations:^{
-                         piece.center = p.center;
+                         piece.center = position;
                          if (soundEnabled) {
                              [self playSoundPieceDrop];
                          }
@@ -522,7 +552,7 @@
                      completion:^(BOOL finished){
                          piece.isOnBoard = YES;
                          piece.positionOnBoard = pos;
-                         p.pieceOnPosition = piece;
+                         //p.pieceOnPosition = piece;
                          NSLog(@"place dropped at position %d, mode 1", pos);
                      }
      ];
@@ -542,10 +572,10 @@
     }
     int pieceTag = tag + offset;
     NMMPiece * piece = [self getPieceFromNumber:pieceTag];
-    NMMPosition *p = [self getPositionFromNumber:pos];
+    CGPoint p = [self getPositionFromNumber:pos];
     [UIView animateWithDuration:ANIMATION_DURATION
                      animations:^{
-                         piece.center = p.center;
+                         piece.center = p;
                          if (soundEnabled) {
                              [self playSoundPieceDrop];
                          }
@@ -557,7 +587,7 @@
 }
 
 -(void)removePieceAnimated:(NMMPiece *)sender atPosition:(int)pos{
-    NMMPosition *p = [self getPositionFromNumber:pos];
+    //CGPoint p = [self getPositionFromNumber:pos];
     [UIView animateWithDuration:ANIMATION_DURATION delay:0.0
                         options:UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
@@ -570,12 +600,11 @@
                          [sender setEnabled:NO];
                          sender.positionOnBoard = -1;
                          sender.isOnBoard = NO;
-                         p.pieceOnPosition = nil;
+                         //p.pieceOnPosition = nil;
                          NSLog(@"removePieceAnimated done");
                      }
      ];
 }
-
 
 -(BOOL)isWhite:(NMMPiece *)piece{
     if (piece.tag<BLACK_OFFSET) {
@@ -646,9 +675,14 @@
     }
     for (int pos=0; pos<24; pos++) {
         if ([nmm getPosition:pos] == colour && [nmm canRemovePieceAtPosition:pos]) {
-            NMMPosition *position = [self getPositionFromNumber:pos];
-            NMMPiece *piece = position.pieceOnPosition;
-            [piece setImage:[UIImage imageNamed:pieceHL] forState:UIControlStateNormal];
+            CGPoint position = [self getPositionFromNumber:pos];
+            for (int pieceNo=1; pieceNo<10; pieceNo++) {
+                int pieceTag = pieceNo+offset;
+                UIButton *piece = (UIButton *)[self.view viewWithTag:pieceTag];
+                if ([piece isEnabled] && [self pointClose:position to:piece]) {
+                    [piece setImage:[UIImage imageNamed:pieceHL] forState:UIControlStateNormal];
+                }
+            }
         }
     }
 }
@@ -667,9 +701,14 @@
     }
     for (int pos=0; pos<24; pos++) {
         if ([nmm getPosition:pos] == colour) {
-            NMMPosition *position = [self getPositionFromNumber:pos];
-            NMMPiece *piece = position.pieceOnPosition;
-            [piece setImage:[UIImage imageNamed:pieceImg] forState:UIControlStateNormal];
+            CGPoint position = [self getPositionFromNumber:pos];
+            for (int pieceNo=1; pieceNo<10; pieceNo++) {
+                int pieceTag = pieceNo+offset;
+                UIButton *piece = (UIButton *)[self.view viewWithTag:pieceTag];
+                if ([piece isEnabled] && [self pointClose:position to:piece]) {
+                    [piece setImage:[UIImage imageNamed:pieceImg] forState:UIControlStateNormal];
+                }
+            }
         }
     }
 }

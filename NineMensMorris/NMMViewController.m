@@ -20,6 +20,7 @@
     BOOL soundEnabled;
     BOOL removing;
     BOOL rotateP2Msg;
+    BOOL positionOperation;
     int moveStartPosition;
     
     //messages
@@ -29,6 +30,13 @@
     NSString *nmmMove;
     NSString *nmmWin;
     NSString *nmmLose;
+    
+    //pieceImg
+    NSString *topPieceImg;
+    NSString *bottomPieceImg;
+    
+    NSArray *topPieces;
+    NSArray *bottomPieces;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *p1label;
@@ -37,25 +45,25 @@
 @property (weak, nonatomic) IBOutlet UILabel *p2msg;
 @property (weak, nonatomic) IBOutlet UIButton *returnButton;
 
-@property (weak, nonatomic) IBOutlet NMMPiece *w1;
-@property (weak, nonatomic) IBOutlet NMMPiece *w2;
-@property (weak, nonatomic) IBOutlet NMMPiece *w3;
-@property (weak, nonatomic) IBOutlet NMMPiece *w4;
-@property (weak, nonatomic) IBOutlet NMMPiece *w5;
-@property (weak, nonatomic) IBOutlet NMMPiece *w6;
-@property (weak, nonatomic) IBOutlet NMMPiece *w7;
-@property (weak, nonatomic) IBOutlet NMMPiece *w8;
-@property (weak, nonatomic) IBOutlet NMMPiece *w9;
+@property (weak, nonatomic) IBOutlet NMMPiece *topPiece1;
+@property (weak, nonatomic) IBOutlet NMMPiece *topPiece2;
+@property (weak, nonatomic) IBOutlet NMMPiece *topPiece3;
+@property (weak, nonatomic) IBOutlet NMMPiece *topPiece4;
+@property (weak, nonatomic) IBOutlet NMMPiece *topPiece5;
+@property (weak, nonatomic) IBOutlet NMMPiece *topPiece6;
+@property (weak, nonatomic) IBOutlet NMMPiece *topPiece7;
+@property (weak, nonatomic) IBOutlet NMMPiece *topPiece8;
+@property (weak, nonatomic) IBOutlet NMMPiece *topPiece9;
 
-@property (weak, nonatomic) IBOutlet NMMPiece *b1;
-@property (weak, nonatomic) IBOutlet NMMPiece *b2;
-@property (weak, nonatomic) IBOutlet NMMPiece *b3;
-@property (weak, nonatomic) IBOutlet NMMPiece *b4;
-@property (weak, nonatomic) IBOutlet NMMPiece *b5;
-@property (weak, nonatomic) IBOutlet NMMPiece *b6;
-@property (weak, nonatomic) IBOutlet NMMPiece *b7;
-@property (weak, nonatomic) IBOutlet NMMPiece *b8;
-@property (weak, nonatomic) IBOutlet NMMPiece *b9;
+@property (weak, nonatomic) IBOutlet NMMPiece *bottomPiece1;
+@property (weak, nonatomic) IBOutlet NMMPiece *bottomPiece2;
+@property (weak, nonatomic) IBOutlet NMMPiece *bottomPiece3;
+@property (weak, nonatomic) IBOutlet NMMPiece *bottomPiece4;
+@property (weak, nonatomic) IBOutlet NMMPiece *bottomPiece5;
+@property (weak, nonatomic) IBOutlet NMMPiece *bottomPiece6;
+@property (weak, nonatomic) IBOutlet NMMPiece *bottomPiece7;
+@property (weak, nonatomic) IBOutlet NMMPiece *bottomPiece8;
+@property (weak, nonatomic) IBOutlet NMMPiece *bottomPiece9;
 
 @property (weak, nonatomic) IBOutlet NMMPosition *pos0;
 @property (weak, nonatomic) IBOutlet NMMPosition *pos1;
@@ -90,24 +98,24 @@
 @synthesize p1msg = _p1msg;
 @synthesize p2msg = _p2msg;
 @synthesize returnButton = _returnButton;
-@synthesize w1 = _w1;
-@synthesize w2 = _w2;
-@synthesize w3 = _w3;
-@synthesize w4 = _w4;
-@synthesize w5 = _w5;
-@synthesize w6 = _w6;
-@synthesize w7 = _w7;
-@synthesize w8 = _w8;
-@synthesize w9 = _w9;
-@synthesize b1 = _b1;
-@synthesize b2 = _b2;
-@synthesize b3 = _b3;
-@synthesize b4 = _b4;
-@synthesize b5 = _b5;
-@synthesize b6 = _b6;
-@synthesize b7 = _b7;
-@synthesize b8 = _b8;
-@synthesize b9 = _b9;
+@synthesize topPiece1 = _topPiece1;
+@synthesize topPiece2 = _topPiece2;
+@synthesize topPiece3 = _topPiece3;
+@synthesize topPiece4 = _topPiece4;
+@synthesize topPiece5 = _topPiece5;
+@synthesize topPiece6 = _topPiece6;
+@synthesize topPiece7 = _topPiece7;
+@synthesize topPiece8 = _topPiece8;
+@synthesize topPiece9 = _topPiece9;
+@synthesize bottomPiece1 = _bottomPiece1;
+@synthesize bottomPiece2 = _bottomPiece2;
+@synthesize bottomPiece3 = _bottomPiece3;
+@synthesize bottomPiece4 = _bottomPiece4;
+@synthesize bottomPiece5 = _bottomPiece5;
+@synthesize bottomPiece6 = _bottomPiece6;
+@synthesize bottomPiece7 = _bottomPiece7;
+@synthesize bottomPiece8 = _bottomPiece8;
+@synthesize bottomPiece9 = _bottomPiece9;
 @synthesize pos0 = _pos0;
 @synthesize pos1 = _pos1;
 @synthesize pos2 = _pos2;
@@ -162,27 +170,45 @@
     //init vars
     removing = NO;
     rotateP2Msg = YES;//TODO: set it to NO in Multi-Device Mode
+    positionOperation = NO;
     
-    //init piece images
-    [_w1 setImage:[UIImage imageNamed:@"white.png"] forState:UIControlStateNormal];
-    [_w2 setImage:[UIImage imageNamed:@"white.png"] forState:UIControlStateNormal];
-    [_w3 setImage:[UIImage imageNamed:@"white.png"] forState:UIControlStateNormal];
-    [_w4 setImage:[UIImage imageNamed:@"white.png"] forState:UIControlStateNormal];
-    [_w5 setImage:[UIImage imageNamed:@"white.png"] forState:UIControlStateNormal];
-    [_w6 setImage:[UIImage imageNamed:@"white.png"] forState:UIControlStateNormal];
-    [_w7 setImage:[UIImage imageNamed:@"white.png"] forState:UIControlStateNormal];
-    [_w8 setImage:[UIImage imageNamed:@"white.png"] forState:UIControlStateNormal];
-    [_w9 setImage:[UIImage imageNamed:@"white.png"] forState:UIControlStateNormal];
+    //rotate p2 labels
+    if (rotateP2Msg) {
+        _p2label.transform = CGAffineTransformMakeRotation(degreesToRadian(180));
+        _p2msg.transform = CGAffineTransformMakeRotation(degreesToRadian(180));
+        topPieceImg = @"black.png";//change this in multi-player game
+        bottomPieceImg = @"white.png";
+    }
+    else{
+        //TODO: decide the colour 
+    }
+    
+    //init piece images    
+    [_topPiece1 setImage:[UIImage imageNamed:topPieceImg] forState:UIControlStateNormal];
+    [_topPiece2 setImage:[UIImage imageNamed:topPieceImg] forState:UIControlStateNormal];
+    [_topPiece3 setImage:[UIImage imageNamed:topPieceImg] forState:UIControlStateNormal];
+    [_topPiece4 setImage:[UIImage imageNamed:topPieceImg] forState:UIControlStateNormal];
+    [_topPiece5 setImage:[UIImage imageNamed:topPieceImg] forState:UIControlStateNormal];
+    [_topPiece6 setImage:[UIImage imageNamed:topPieceImg] forState:UIControlStateNormal];
+    [_topPiece7 setImage:[UIImage imageNamed:topPieceImg] forState:UIControlStateNormal];
+    [_topPiece8 setImage:[UIImage imageNamed:topPieceImg] forState:UIControlStateNormal];
+    [_topPiece9 setImage:[UIImage imageNamed:topPieceImg] forState:UIControlStateNormal];
 
-    [_b1 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
-    [_b2 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
-    [_b3 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
-    [_b4 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
-    [_b5 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
-    [_b6 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
-    [_b7 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
-    [_b8 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
-    [_b9 setImage:[UIImage imageNamed:@"black.png"] forState:UIControlStateNormal];
+    [_bottomPiece1 setImage:[UIImage imageNamed:bottomPieceImg] forState:UIControlStateNormal];
+    [_bottomPiece2 setImage:[UIImage imageNamed:bottomPieceImg] forState:UIControlStateNormal];
+    [_bottomPiece3 setImage:[UIImage imageNamed:bottomPieceImg] forState:UIControlStateNormal];
+    [_bottomPiece4 setImage:[UIImage imageNamed:bottomPieceImg] forState:UIControlStateNormal];
+    [_bottomPiece5 setImage:[UIImage imageNamed:bottomPieceImg] forState:UIControlStateNormal];
+    [_bottomPiece6 setImage:[UIImage imageNamed:bottomPieceImg] forState:UIControlStateNormal];
+    [_bottomPiece7 setImage:[UIImage imageNamed:bottomPieceImg] forState:UIControlStateNormal];
+    [_bottomPiece8 setImage:[UIImage imageNamed:bottomPieceImg] forState:UIControlStateNormal];
+    [_bottomPiece9 setImage:[UIImage imageNamed:bottomPieceImg] forState:UIControlStateNormal];
+   
+    
+    //add pieces into arrays
+    topPieces = [NSArray arrayWithObjects:_topPiece1,_topPiece2,_topPiece3,_topPiece4,_topPiece5,_topPiece6,_topPiece7,_topPiece8,_topPiece9, nil];
+    bottomPieces = [NSArray arrayWithObjects:_bottomPiece1,_bottomPiece2,_bottomPiece3,_bottomPiece4,_bottomPiece5,_bottomPiece6,_bottomPiece7,_bottomPiece8,_bottomPiece9, nil];
+    
     
     //set Label/Button style
     [_returnButton applyButtonStyle];
@@ -191,11 +217,6 @@
     [_p1msg applyLabelStyleMsg];
     [_p2msg applyLabelStyleMsg];
     
-    //rotate p2 labels
-    if (rotateP2Msg) {
-        _p2label.transform = CGAffineTransformMakeRotation(degreesToRadian(180));
-        _p2msg.transform = CGAffineTransformMakeRotation(degreesToRadian(180));
-    }
     
     //messages
     nmmPlacing = @"place a piece";
@@ -222,24 +243,24 @@
 {
     [self setPortraitView:nil];
     [self setLandscapeView:nil];
-    [self setW1:nil];
-    [self setW2:nil];
-    [self setW3:nil];
-    [self setW4:nil];
-    [self setW5:nil];
-    [self setW6:nil];
-    [self setW7:nil];
-    [self setW8:nil];
-    [self setW9:nil];
-    [self setB1:nil];
-    [self setB2:nil];
-    [self setB3:nil];
-    [self setB4:nil];
-    [self setB5:nil];
-    [self setB6:nil];
-    [self setB7:nil];
-    [self setB8:nil];
-    [self setB9:nil];
+    [self setTopPiece1:nil];
+    [self setTopPiece2:nil];
+    [self setTopPiece3:nil];
+    [self setTopPiece4:nil];
+    [self setTopPiece5:nil];
+    [self setTopPiece6:nil];
+    [self setTopPiece7:nil];
+    [self setTopPiece8:nil];
+    [self setTopPiece9:nil];
+    [self setBottomPiece1:nil];
+    [self setBottomPiece2:nil];
+    [self setBottomPiece3:nil];
+    [self setBottomPiece4:nil];
+    [self setBottomPiece5:nil];
+    [self setBottomPiece6:nil];
+    [self setBottomPiece7:nil];
+    [self setBottomPiece8:nil];
+    [self setBottomPiece9:nil];
     [self setPos0:nil];
     [self setPos1:nil];
     [self setPos2:nil];
@@ -273,7 +294,7 @@
     // Release any retained subviews of the main view.
 }
 
-#pragma mark - IBActions
+#pragma mark - IBActions - Piece
 
 -(IBAction)pieceTouch:(NMMPiece *)sender{
     originalCenter = sender.center;
@@ -311,14 +332,7 @@
                 if ([self isWhite:sender]) {
                     if ([nmm placePieceWithColour:WHITE atPosition:pos]) {
                         [self dropPieceAnimated:sender atPosition:pos];
-                        if (nmm.phase == REMOVING) {
-                            [self msgPlayerRemove:WHITE];
-                            [self showPiecesCanBeRemoved:BLACK];
-                        }
-                        else
-                        {
-                            [self msgPlayerPlace:BLACK];
-                        }
+                        [self checkAfterPieceDropForPlayerColour:WHITE inPhase:PLACING];
                         return;
                     }
                 }
@@ -328,18 +342,7 @@
                 if (![self isWhite:sender]) {
                     if ([nmm placePieceWithColour:BLACK atPosition:pos]) {
                         [self dropPieceAnimated:sender atPosition:pos];
-                        if (nmm.phase == REMOVING) {
-                            [self msgPlayerRemove:BLACK];
-                            [self showPiecesCanBeRemoved:WHITE];
-                        }
-                        else
-                        {
-                            if ([nmm isMovingPhase]) {
-                                [self msgPlayerMove:WHITE];
-                            }else{
-                                [self msgPlayerPlace:WHITE];
-                            }
-                        }
+                        [self checkAfterPieceDropForPlayerColour:BLACK inPhase:PLACING];
                         return;
                     }
                 }
@@ -352,17 +355,7 @@
                     if ([nmm removePieceAtPosition:pos]) {
                         [self removePieceAnimated:sender atPosition:pos];
                         [self showPiecesNormal:BLACK];
-                        if (nmm.phase == ENDING) {
-                            [self msgPlayerWin:WHITE];
-                            [self playSoundEnd];
-                            return;
-                        }
-                        if ([nmm isMovingPhase]) {
-                            [self msgPlayerMove:BLACK];
-                        }
-                        else{
-                            [self msgPlayerPlace:BLACK];
-                        }
+                        [self checkAfterPieceDropForPlayerColour:WHITE inPhase:REMOVING];
                     }
                 }
             }
@@ -371,17 +364,7 @@
                     if ([nmm removePieceAtPosition:pos]) {
                         [self removePieceAnimated:sender atPosition:pos];
                         [self showPiecesNormal:WHITE];
-                        if (nmm.phase == ENDING) {
-                            [self msgPlayerWin:BLACK];
-                            [self playSoundEnd];
-                            return;
-                        }
-                        if ([nmm isMovingPhase]) {
-                            [self msgPlayerMove:WHITE];
-                        }
-                        else{
-                            [self msgPlayerPlace:WHITE];
-                        }
+                        [self checkAfterPieceDropForPlayerColour:BLACK inPhase:REMOVING];
                     }
                 }
             }
@@ -391,17 +374,7 @@
                 if ([self isWhite:sender]) {
                     if ([nmm moveFrom:moveStartPosition to:pos]) {
                         [self dropPieceAnimated:sender atPosition:pos];
-                        if (nmm.phase == REMOVING) {
-                            [self msgPlayerRemove:WHITE];
-                            [self showPiecesCanBeRemoved:BLACK];
-                        }
-                        else if (nmm.phase == ENDING){
-                            [self msgPlayerWin:WHITE];
-                            [self playSoundEnd];
-                        }
-                        else{
-                            [self msgPlayerMove:BLACK];
-                        }
+                        [self checkAfterPieceDropForPlayerColour:WHITE inPhase:MOVING];
                         return;
                     }
                 }
@@ -411,17 +384,7 @@
                 if (![self isWhite:sender]) {
                     if ([nmm moveFrom:moveStartPosition to:pos]) {
                         [self dropPieceAnimated:sender atPosition:pos];
-                        if (nmm.phase == REMOVING) {
-                            [self msgPlayerRemove:BLACK];
-                            [self showPiecesCanBeRemoved:WHITE];
-                        }
-                        else if (nmm.phase == ENDING){
-                            [self msgPlayerWin:BLACK];
-                            [self playSoundEnd];
-                        }
-                        else{
-                            [self msgPlayerMove:WHITE];
-                        }
+                        [self checkAfterPieceDropForPlayerColour:BLACK inPhase:MOVING];
                         return;
                     }
                 }
@@ -444,15 +407,79 @@
     }
 }
 
--(IBAction)touchUpOutside:(UIButton *)sender{
+-(IBAction)touchUpOutside:(NMMPiece *)sender{
     NSLog(@"touchUpOutside");
     [self moveBack:sender];
 }
 
+
+
+#pragma mark - IBActions - Position
+-(IBAction)positionTouch:(NMMPosition *)sender{
+    switch (nmm.phase) {
+        case PLACING:
+            positionOperation = YES;
+            break;
+        case MOVING:
+            break;
+            
+        case REMOVING:
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
+-(IBAction)positionTouchUpInside:(NMMPosition *)sender{
+    switch (nmm.phase) {
+        case PLACING:
+            if (positionOperation) {
+                if ([nmm whiteTurn]) {
+                    for (NMMPiece *p in bottomPieces) {
+                        if (![p isOnBoard] && ![p isRemoved]) {
+                            if ([nmm placePieceWithColour:WHITE atPosition:sender.tag - 1]) {
+                                [self dropPieceAnimated:p atPosition:sender.tag-1];
+                                [self checkAfterPieceDropForPlayerColour:WHITE inPhase:PLACING];
+                                NSLog(@"bottom tag is %d",p.tag);
+                                break;
+                            }
+                        }
+                    }
+                }
+                else{//black
+                    for (NMMPiece *p in topPieces) {
+                        if (![p isOnBoard] && ![p isRemoved]) {
+                            if ([nmm placePieceWithColour:BLACK atPosition:sender.tag - 1]) {
+                                [self dropPieceAnimated:p atPosition:sender.tag-1];
+                                [self checkAfterPieceDropForPlayerColour:BLACK inPhase:PLACING];
+                                NSLog(@"top tag is %d",p.tag);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            positionOperation = NO;
+            break;
+            
+        case MOVING:
+            break;
+            
+        case REMOVING:
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+
 - (IBAction)returnPressed:(UIButton *)sender {
     [self.delegate nmmViewControllerDidCancel:self];
 }
-
 
 
 -(IBAction)testMoveFunction:(UIButton *)sender{
@@ -528,9 +555,71 @@
      ];
 }
 
+-(void)checkAfterPieceDropForPlayerColour:(int)colour inPhase:(int)phase{
+    int currentPlayer = -1;
+    int opponent = -1;
+    
+    if (colour == WHITE) {
+        currentPlayer = WHITE;
+        opponent = BLACK;
+    }else{
+        currentPlayer = BLACK;
+        opponent = WHITE;
+    }
+    switch (phase) {
+        case PLACING:
+            if (nmm.phase == REMOVING) {
+                [self msgPlayerRemove:currentPlayer];
+                [self showPiecesCanBeRemoved:opponent];
+            }
+            else
+            {
+                if (currentPlayer == BLACK) {
+                    if ([nmm isMovingPhase]) {
+                        [self msgPlayerMove:WHITE];
+                    }else{
+                        [self msgPlayerPlace:WHITE];
+                    }
+                }
+                else{
+                    [self msgPlayerPlace:opponent];
+                }
+            }
+            break;
+        case REMOVING:
+            if (nmm.phase == ENDING) {
+                [self msgPlayerWin:currentPlayer];
+                [self playSoundEnd];
+                return;
+            }
+            if ([nmm isMovingPhase]) {
+                [self msgPlayerMove:opponent];
+            }
+            else{
+                [self msgPlayerPlace:opponent];
+            }
+            break;
+        case MOVING:
+            if (nmm.phase == REMOVING) {
+                [self msgPlayerRemove:currentPlayer];
+                [self showPiecesCanBeRemoved:opponent];
+            }
+            else if (nmm.phase == ENDING){
+                [self msgPlayerWin:currentPlayer];
+                [self playSoundEnd];
+            }
+            else{
+                [self msgPlayerMove:opponent];
+            }
+            break;
+        default:
+            break;
+    }
+}
+
 //For multi-device game: move a piece to a position
 -(void)movePiece:(int)colour withTag:(int)tag toPosition:(int)pos{
-    int offset;
+    int offset = 0;
     if (colour == WHITE) {
         offset = WHITE_OFFSET;
     }
@@ -543,18 +632,9 @@
     int pieceTag = tag + offset;
     NMMPiece * piece = [self getPieceFromNumber:pieceTag];
     NMMPosition *p = [self getPositionFromNumber:pos];
-    [UIView animateWithDuration:ANIMATION_DURATION
-                     animations:^{
-                         piece.center = p.center;
-                         if (soundEnabled) {
-                             [self playSoundPieceDrop];
-                         }
-                     }
-                     completion:^(BOOL finished){
-                         NSLog(@"place dropped at position %d, mode 2", pos);
-                     }
-     ];
+    [self dropPieceAnimated:piece atPosition:p.tag-1];
 }
+
 
 -(void)removePieceAnimated:(NMMPiece *)sender atPosition:(int)pos{
     NMMPosition *p = [self getPositionFromNumber:pos];
@@ -570,6 +650,7 @@
                          [sender setEnabled:NO];
                          sender.positionOnBoard = -1;
                          sender.isOnBoard = NO;
+                         sender.isRemoved = YES;
                          p.pieceOnPosition = nil;
                          NSLog(@"removePieceAnimated done");
                      }
@@ -633,13 +714,10 @@
 #pragma mark - about display
 
 -(void)showPiecesCanBeRemoved:(int)colour{
-    int offset = 0;
     NSString *pieceHL;
     if (colour == WHITE) {
-        offset = WHITE_OFFSET;
         pieceHL = @"whiteHL.png";
     }else if (colour == BLACK) {
-        offset = BLACK_OFFSET;
         pieceHL = @"blackHL.png";
     }else{
         NSLog(@"unexpected colour in showPiecesCanBeRemoved:");
@@ -654,13 +732,10 @@
 }
 
 -(void)showPiecesNormal:(int)colour{
-    int offset = 0;
     NSString *pieceImg;
     if (colour == WHITE) {
-        offset = WHITE_OFFSET;
         pieceImg = @"white.png";
     }else if (colour == BLACK) {
-        offset = BLACK_OFFSET;
         pieceImg = @"black.png";
     }else{
         NSLog(@"unexpected colour in showPiecesNormal:");

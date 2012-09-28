@@ -12,6 +12,7 @@
 
 @synthesize isOnBoard = _isOnBoard;
 @synthesize positionOnBoard = _positionOnBoard;
+@synthesize isRemoved = _isRemoved;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -19,6 +20,7 @@
     if (self) {
         // Initialization code
         _isOnBoard = NO;
+        _isRemoved = NO;
         _positionOnBoard = -1;
     }
     return self;

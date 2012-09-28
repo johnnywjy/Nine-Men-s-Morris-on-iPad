@@ -288,7 +288,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NMM;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = UoL;
 			};
 			buildConfigurationList = 3B16B6E715E90602000943B0 /* Build configuration list for PBXProject "NineMensMorris" */;

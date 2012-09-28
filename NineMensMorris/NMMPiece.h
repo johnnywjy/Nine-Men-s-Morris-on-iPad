@@ -11,6 +11,7 @@
 @interface NMMPiece : UIButton
 
 @property (nonatomic) BOOL isOnBoard;
+@property (nonatomic) BOOL isRemoved;
 @property (nonatomic) NSInteger positionOnBoard;
 
 @end

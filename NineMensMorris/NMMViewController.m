@@ -504,7 +504,7 @@
 
 
 
-#pragma mark - general functuins
+#pragma mark - general functions
 
 -(void)moveBack:(UIButton *)piece{
     [UIView animateWithDuration:ANIMATION_DURATION

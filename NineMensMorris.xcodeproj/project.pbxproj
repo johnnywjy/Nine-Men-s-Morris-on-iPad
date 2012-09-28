@@ -62,7 +62,7 @@
 		3B04939F15F54A4F00359708 /* NMMPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMPosition.m; sourceTree = "<group>"; };
 		3B0493A515F5783200359708 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon72.png; sourceTree = "<group>"; };
 		3B0493A715F578AB00359708 /* icon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon144.png; sourceTree = "<group>"; };
-		3B16B6ED15E90602000943B0 /* NineMensMorris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineMensMorris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B16B6ED15E90602000943B0 /* NMM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B16B6F115E90602000943B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B16B6F315E90602000943B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B16B6F515E90602000943B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,7 +151,7 @@
 		3B16B6EE15E90602000943B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B16B6ED15E90602000943B0 /* NineMensMorris.app */,
+				3B16B6ED15E90602000943B0 /* NMM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 			);
 			name = NineMensMorris;
 			productName = NineMensMorris;
-			productReference = 3B16B6ED15E90602000943B0 /* NineMensMorris.app */;
+			productReference = 3B16B6ED15E90602000943B0 /* NMM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -446,7 +446,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NineMensMorris/NineMensMorris-Prefix.pch";
 				INFOPLIST_FILE = "NineMensMorris/NineMensMorris-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NMM;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -457,7 +457,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NineMensMorris/NineMensMorris-Prefix.pch";
 				INFOPLIST_FILE = "NineMensMorris/NineMensMorris-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NMM;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

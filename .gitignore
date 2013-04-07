@@ -1,2 +1,10 @@
 .DS_Store
 
+
+*.xcworkspacedata
+
+*.xcuserstate
+
+*.xcscheme
+
+NineMensMorris.xcodeproj/xcuserdata/zhaofei.xcuserdatad/xcschemes/xcschememanagement.plist

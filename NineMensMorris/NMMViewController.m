@@ -14,7 +14,6 @@
 #define BLACK_OFFSET 2000
 #define ANIMATION_DURATION 0.3f
 
-
 #define SOUND_DROP (@"sound0")
 #define SOUND_RETURN (@"sound1")
 #define SOUND_REMOVE (@"sound2")

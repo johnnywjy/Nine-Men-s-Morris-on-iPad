@@ -685,6 +685,7 @@
     UInt32 soundID;
     AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);
+    CFRelease(soundURLRef);
 }
 
 -(void)playSoundReturn{
@@ -693,6 +694,7 @@
     UInt32 soundID;
     AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);
+    CFRelease(soundURLRef);
 }
 
 -(void)playSoundRemove{
@@ -701,6 +703,7 @@
     UInt32 soundID;
     AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);
+    CFRelease(soundURLRef);
 }
 
 -(void)playSoundEnd{
@@ -709,6 +712,7 @@
     UInt32 soundID;
     AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);
+    CFRelease(soundURLRef);
 }
 
 #pragma mark - about display

@@ -14,6 +14,12 @@
 #define BLACK_OFFSET 2000
 #define ANIMATION_DURATION 0.3f
 
+
+#define SOUND_DROP (@"sound0")
+#define SOUND_RETURN (@"sound1")
+#define SOUND_REMOVE (@"sound2")
+#define SOUND_END (@"sound3")
+
 @interface NMMViewController (){
     CGPoint originalCenter;
     NMMPiece *currentPiece;
@@ -512,7 +518,7 @@
                      }
      ];
     if (soundEnabled) {
-        [self playSoundReturn];
+        [self playSound:(CFStringRef)SOUND_RETURN];
     }
 }
 
@@ -543,7 +549,7 @@
                      animations:^{
                          piece.center = p.center;
                          if (soundEnabled) {
-                             [self playSoundPieceDrop];
+                             [self playSound:(CFStringRef)SOUND_DROP];
                          }
                      }
                      completion:^(BOOL finished){
@@ -589,7 +595,7 @@
         case REMOVING:
             if (nmm.phase == ENDING) {
                 [self msgPlayerWin:currentPlayer];
-                [self playSoundEnd];
+                [self playSound:(CFStringRef)SOUND_END];
                 return;
             }
             if ([nmm isMovingPhase]) {
@@ -606,7 +612,7 @@
             }
             else if (nmm.phase == ENDING){
                 [self msgPlayerWin:currentPlayer];
-                [self playSoundEnd];
+                [self playSound:(CFStringRef)SOUND_END];
             }
             else{
                 [self msgPlayerMove:opponent];
@@ -643,7 +649,7 @@
                      animations:^{
                          [sender setAlpha:0];
                          if (soundEnabled) {
-                             [self playSoundRemove];
+                             [self playSound:(CFStringRef)SOUND_REMOVE];
                          }
                      }completion:^(BOOL finished){
                          [sender setImage:nil forState:UIControlStateNormal];
@@ -678,37 +684,9 @@
 }
 
 #pragma mark - play sounds
-
--(void)playSoundPieceDrop{
+-(void)playSound:(CFStringRef)filename{
     CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef soundURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)@"sound0" , CFSTR("wav"), nil);
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
-    CFRelease(soundURLRef);
-}
-
--(void)playSoundReturn{
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef soundURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)@"sound1" , CFSTR("wav"), nil);
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
-    CFRelease(soundURLRef);
-}
-
--(void)playSoundRemove{
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef soundURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)@"sound2" , CFSTR("wav"), nil);
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
-    CFRelease(soundURLRef);
-}
-
--(void)playSoundEnd{
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef soundURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)@"sound3" , CFSTR("wav"), nil);
+    CFURLRef soundURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)filename , CFSTR("wav"), nil);
     UInt32 soundID;
     AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);

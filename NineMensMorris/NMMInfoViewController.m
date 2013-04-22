@@ -23,6 +23,7 @@
 @synthesize ruleLabel = _ruleLabel;
 @synthesize ruleText = _ruleText;
 @synthesize returnButton = _returnButton;
+@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +34,7 @@
     return self;
 }
 - (IBAction)returnPressed:(UIButton *)sender {
-    [self.delegate nmmInfoViewControllerDidCancel:self];
+    [self.delegate dismissViewController:self];
 }
 
 - (void)viewDidLoad

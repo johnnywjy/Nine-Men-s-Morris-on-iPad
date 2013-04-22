@@ -10,17 +10,10 @@
 #import "NMMSettings.h"
 #import "UILabel+NMMAdditions.h"
 #import "UIButton+NMMAdditions.h"
-
-@class NMMOptionsViewController;
-
-@protocol NMMOptionsViewControllerDelegate <NSObject>
-
-- (void)nmmOptionsViewControllerDidCancel:(NMMOptionsViewController *)controller;
-
-@end
+#import "ModalViewDelegate.h"
 
 @interface NMMOptionsViewController : UIViewController
 
-@property (nonatomic, weak) id <NMMOptionsViewControllerDelegate> delegate;
+@property (nonatomic, weak) id <ModalViewDelegate> delegate;
 
 @end

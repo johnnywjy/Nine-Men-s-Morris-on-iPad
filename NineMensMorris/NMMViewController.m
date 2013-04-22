@@ -147,6 +147,7 @@
 @synthesize pos23 = _pos23;
 @synthesize portraitView = _portraitView;
 @synthesize landscapeView = _landscapeView;
+@synthesize delegate = _delegate;
 
 - (void)viewDidLoad
 {
@@ -483,7 +484,7 @@
 
 
 - (IBAction)returnPressed:(UIButton *)sender {
-    [self.delegate nmmViewControllerDidCancel:self];
+    [self.delegate dismissViewController:self];
 }
 
 

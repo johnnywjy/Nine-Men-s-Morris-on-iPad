@@ -11,8 +11,9 @@
 #import "NMMOptionsViewController.h"
 #import "NMMInfoViewController.h"
 #import "UIButton+NMMAdditions.h"
+#import "ModalViewDelegate.h"
 
-@interface NMMStartViewController : UIViewController <NMMViewControllerDelegate, NMMOptionsViewControllerDelegate, NMMInfoViewControllerDelegate>
+@interface NMMStartViewController : UIViewController <ModalViewDelegate>
 
 -(IBAction)startPressed:(id)sender;
 

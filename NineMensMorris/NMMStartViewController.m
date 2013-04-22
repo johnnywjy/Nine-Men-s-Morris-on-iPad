@@ -35,6 +35,8 @@
     controller.delegate = self;
     [self presentViewController:controller animated:YES completion:nil];
 }
+
+
 - (IBAction)optionsPredded:(UIButton *)sender {
     NMMOptionsViewController *controller = [[NMMOptionsViewController alloc] initWithNibName:@"NMMOptionsViewController" bundle:nil];
     controller.delegate = self;
@@ -76,16 +78,9 @@
 
 #pragma mark - NMMViewControllerDelegate
 
-- (void)nmmViewControllerDidCancel:(NMMViewController *)controller{
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void) dismissViewController:(UIViewController *)controller {
+    [controller dismissModalViewControllerAnimated:YES];
 }
 
-- (void)nmmOptionsViewControllerDidCancel:(NMMOptionsViewController *)controller{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)nmmInfoViewControllerDidCancel:(NMMInfoViewController *)controller{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 @end

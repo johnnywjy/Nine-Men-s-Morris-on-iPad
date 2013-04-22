@@ -8,14 +8,7 @@
 #import "UILabel+NMMAdditions.h"
 #import "NMMPiece.h"
 #import "NMMPosition.h"
-
-@class NMMViewController;
-
-@protocol NMMViewControllerDelegate <NSObject>
-
-- (void)nmmViewControllerDidCancel:(NMMViewController *)controller;
-
-@end
+#import "ModalViewDelegate.h"
 
 
 @interface NMMViewController : UIViewController
@@ -23,7 +16,7 @@
     NMM *nmm;
 }
 
-@property (nonatomic, weak) id <NMMViewControllerDelegate> delegate;
+@property (nonatomic, weak) id <ModalViewDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIView *portraitView;
 @property (strong, nonatomic) IBOutlet UIView *landscapeView;
 @end

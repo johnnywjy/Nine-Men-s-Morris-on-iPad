@@ -118,6 +118,7 @@
 		3B41C5C015F137480001D2E7 /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Action_Man.ttf; path = Font/Action_Man.ttf; sourceTree = "<group>"; };
 		3B41C5C215F1393A0001D2E7 /* UILabel+NMMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NMMAdditions.h"; sourceTree = "<group>"; };
 		3B41C5C315F1393A0001D2E7 /* UILabel+NMMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NMMAdditions.m"; sourceTree = "<group>"; };
+		A4AFCD841725452100E82A0B /* ModalViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +174,7 @@
 			children = (
 				3B41C5B215F1017D0001D2E7 /* Categroies */,
 				3B16B71D15E906CA000943B0 /* NMM.h */,
+				A4AFCD841725452100E82A0B /* ModalViewDelegate.h */,
 				3B16B71E15E906CA000943B0 /* NMM.m */,
 				3B16B70015E90602000943B0 /* NMMAppDelegate.h */,
 				3B16B70115E90602000943B0 /* NMMAppDelegate.m */,

@@ -1132,7 +1132,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="148457088">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIImageView" id="1052016066">
@@ -1171,6 +1171,7 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{1004, 768}</string>
+				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="1052016066"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">

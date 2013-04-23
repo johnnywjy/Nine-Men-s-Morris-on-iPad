@@ -8,21 +8,12 @@
 
 #import "NMMViewController.h"
 
-#define degreesToRadian(x) (M_PI * (x) / 180.0)
-#define MIN_DISTANCE 40.0f
-#define WHITE_OFFSET 1000
-#define BLACK_OFFSET 2000
-#define ANIMATION_DURATION 0.3f
 
-#define SOUND_DROP (@"sound0")
-#define SOUND_RETURN (@"sound1")
-#define SOUND_REMOVE (@"sound2")
-#define SOUND_END (@"sound3")
 
 @interface NMMViewController (){
     CGPoint originalCenter;
     NMMPiece *currentPiece;
-    BOOL soundEnabled;
+    int soundStatus;
     BOOL removing;
     BOOL rotateP2Msg;
     BOOL positionOperation;
@@ -162,9 +153,9 @@
     //read settings
     NSString *settings = [NMMSettings getCurrentSettings];
     if ([settings characterAtIndex:0] == '1') {//sound
-        soundEnabled = YES;
+        soundStatus = SOUND_ENABLED;
     }else{
-        soundEnabled = NO;
+        soundStatus = SOUND_MUTE;
     }
     
     if ([settings characterAtIndex:1] == '1') {
@@ -517,9 +508,7 @@
                      animations:^{piece.center = originalCenter;
                      }
      ];
-    if (soundEnabled) {
-        [self playSound:(CFStringRef)SOUND_RETURN];
-    }
+    [self playSound:(CFStringRef)SOUND_RETURN withSetting:soundStatus];
 }
 
 -(int)getPiecePosition:(NMMPiece *)piece{
@@ -548,9 +537,7 @@
     [UIView animateWithDuration:ANIMATION_DURATION
                      animations:^{
                          piece.center = p.center;
-                         if (soundEnabled) {
-                             [self playSound:(CFStringRef)SOUND_DROP];
-                         }
+                         [self playSound:(CFStringRef)SOUND_DROP withSetting:soundStatus];
                      }
                      completion:^(BOOL finished){
                          piece.isOnBoard = YES;
@@ -595,7 +582,7 @@
         case REMOVING:
             if (nmm.phase == ENDING) {
                 [self msgPlayerWin:currentPlayer];
-                [self playSound:(CFStringRef)SOUND_END];
+                [self playSound:(CFStringRef)SOUND_END withSetting:soundStatus];
                 return;
             }
             if ([nmm isMovingPhase]) {
@@ -612,7 +599,7 @@
             }
             else if (nmm.phase == ENDING){
                 [self msgPlayerWin:currentPlayer];
-                [self playSound:(CFStringRef)SOUND_END];
+                [self playSound:(CFStringRef)SOUND_END withSetting:soundStatus];
             }
             else{
                 [self msgPlayerMove:opponent];
@@ -648,9 +635,7 @@
                         options:UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          [sender setAlpha:0];
-                         if (soundEnabled) {
-                             [self playSound:(CFStringRef)SOUND_REMOVE];
-                         }
+                         [self playSound:(CFStringRef)SOUND_REMOVE withSetting:soundStatus];
                      }completion:^(BOOL finished){
                          [sender setImage:nil forState:UIControlStateNormal];
                          [sender setEnabled:NO];
@@ -684,13 +669,18 @@
 }
 
 #pragma mark - play sounds
--(void)playSound:(CFStringRef)filename{
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef soundURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)filename , CFSTR("wav"), nil);
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
-    CFRelease(soundURLRef);
+-(void)playSound:(CFStringRef)filename withSetting:(int) setting{
+    if (setting == SOUND_MUTE) {
+        return;
+    }
+    else if (setting == SOUND_ENABLED){
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef soundURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)filename , CFSTR("wav"), nil);
+        UInt32 soundID;
+        AudioServicesCreateSystemSoundID(soundURLRef, &soundID);
+        AudioServicesPlaySystemSound(soundID);
+        CFRelease(soundURLRef);
+    }
 }
 
 #pragma mark - about display

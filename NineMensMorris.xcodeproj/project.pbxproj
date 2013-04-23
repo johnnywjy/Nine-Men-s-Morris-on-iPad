@@ -173,8 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				3B41C5B215F1017D0001D2E7 /* Categroies */,
-				3B16B71D15E906CA000943B0 /* NMM.h */,
 				A4AFCD841725452100E82A0B /* ModalViewDelegate.h */,
+				3B16B71D15E906CA000943B0 /* NMM.h */,
 				3B16B71E15E906CA000943B0 /* NMM.m */,
 				3B16B70015E90602000943B0 /* NMMAppDelegate.h */,
 				3B16B70115E90602000943B0 /* NMMAppDelegate.m */,
@@ -251,10 +251,10 @@
 		3B41C5B215F1017D0001D2E7 /* Categroies */ = {
 			isa = PBXGroup;
 			children = (
-				3B41C5AF15F101490001D2E7 /* UIFont+NMMAdditions.h */,
-				3B41C5B015F101490001D2E7 /* UIFont+NMMAdditions.m */,
 				3B41C5B415F104D10001D2E7 /* UIButton+NMMAdditions.h */,
 				3B41C5B515F104D10001D2E7 /* UIButton+NMMAdditions.m */,
+				3B41C5AF15F101490001D2E7 /* UIFont+NMMAdditions.h */,
+				3B41C5B015F101490001D2E7 /* UIFont+NMMAdditions.m */,
 				3B41C5C215F1393A0001D2E7 /* UILabel+NMMAdditions.h */,
 				3B41C5C315F1393A0001D2E7 /* UILabel+NMMAdditions.m */,
 				3B190F2515F3BBF400929826 /* UITextView+NMMAdditions.h */,

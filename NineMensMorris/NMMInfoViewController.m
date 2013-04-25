@@ -18,12 +18,6 @@
 @end
 
 @implementation NMMInfoViewController
-@synthesize introLabel = _introLabel;
-@synthesize introText = _introText;
-@synthesize ruleLabel = _ruleLabel;
-@synthesize ruleText = _ruleText;
-@synthesize returnButton = _returnButton;
-@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

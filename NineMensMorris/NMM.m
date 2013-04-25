@@ -4,15 +4,6 @@
 
 @implementation NMM
 
-@synthesize whiteTurn = _whiteTurn;
-@synthesize phase = _phase;
-@synthesize canFly = _canFly;
-@synthesize whiteCount = _whiteCount;
-@synthesize blackCount = _blackCount;
-@synthesize selectedPiece = _selectedPiece;
-@synthesize isMovingPhase = _isMovingPhase;
-@synthesize winner = _winner;
-
 -(id)init
 {
     

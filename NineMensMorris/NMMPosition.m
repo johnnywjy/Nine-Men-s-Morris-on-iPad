@@ -10,8 +10,6 @@
 
 @implementation NMMPosition
 
-@synthesize pieceOnPosition = _pieceOnPosition;
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

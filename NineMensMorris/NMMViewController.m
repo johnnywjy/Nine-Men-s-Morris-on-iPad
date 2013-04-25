@@ -89,56 +89,6 @@
 @end
 
 @implementation NMMViewController
-@synthesize p1label = _p1label;
-@synthesize p2label = _p2label;
-@synthesize p1msg = _p1msg;
-@synthesize p2msg = _p2msg;
-@synthesize returnButton = _returnButton;
-@synthesize topPiece1 = _topPiece1;
-@synthesize topPiece2 = _topPiece2;
-@synthesize topPiece3 = _topPiece3;
-@synthesize topPiece4 = _topPiece4;
-@synthesize topPiece5 = _topPiece5;
-@synthesize topPiece6 = _topPiece6;
-@synthesize topPiece7 = _topPiece7;
-@synthesize topPiece8 = _topPiece8;
-@synthesize topPiece9 = _topPiece9;
-@synthesize bottomPiece1 = _bottomPiece1;
-@synthesize bottomPiece2 = _bottomPiece2;
-@synthesize bottomPiece3 = _bottomPiece3;
-@synthesize bottomPiece4 = _bottomPiece4;
-@synthesize bottomPiece5 = _bottomPiece5;
-@synthesize bottomPiece6 = _bottomPiece6;
-@synthesize bottomPiece7 = _bottomPiece7;
-@synthesize bottomPiece8 = _bottomPiece8;
-@synthesize bottomPiece9 = _bottomPiece9;
-@synthesize pos0 = _pos0;
-@synthesize pos1 = _pos1;
-@synthesize pos2 = _pos2;
-@synthesize pos3 = _pos3;
-@synthesize pos4 = _pos4;
-@synthesize pos5 = _pos5;
-@synthesize pos6 = _pos6;
-@synthesize pos7 = _pos7;
-@synthesize pos8 = _pos8;
-@synthesize pos9 = _pos9;
-@synthesize pos10 = _pos10;
-@synthesize pos11 = _pos11;
-@synthesize pos12 = _pos12;
-@synthesize pos13 = _pos13;
-@synthesize pos14 = _pos14;
-@synthesize pos15 = _pos15;
-@synthesize pos16 = _pos16;
-@synthesize pos17 = _pos17;
-@synthesize pos18 = _pos18;
-@synthesize pos19 = _pos19;
-@synthesize pos20 = _pos20;
-@synthesize pos21 = _pos21;
-@synthesize pos22 = _poa22;
-@synthesize pos23 = _pos23;
-@synthesize portraitView = _portraitView;
-@synthesize landscapeView = _landscapeView;
-@synthesize delegate = _delegate;
 
 - (void)viewDidLoad
 {
@@ -203,8 +153,8 @@
    
     
     //add pieces into arrays
-    topPieces = [NSArray arrayWithObjects:_topPiece1,_topPiece2,_topPiece3,_topPiece4,_topPiece5,_topPiece6,_topPiece7,_topPiece8,_topPiece9, nil];
-    bottomPieces = [NSArray arrayWithObjects:_bottomPiece1,_bottomPiece2,_bottomPiece3,_bottomPiece4,_bottomPiece5,_bottomPiece6,_bottomPiece7,_bottomPiece8,_bottomPiece9, nil];
+    topPieces = @[_topPiece1,_topPiece2,_topPiece3,_topPiece4,_topPiece5,_topPiece6,_topPiece7,_topPiece8,_topPiece9];
+    bottomPieces = @[_bottomPiece1,_bottomPiece2,_bottomPiece3,_bottomPiece4,_bottomPiece5,_bottomPiece6,_bottomPiece7,_bottomPiece8,_bottomPiece9];
     
     
     //set Label/Button style

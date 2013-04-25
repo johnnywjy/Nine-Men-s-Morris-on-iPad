@@ -57,9 +57,9 @@
 
 /* Begin PBXFileReference section */
 		3B04939A15F54A3F00359708 /* NMMPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMPiece.h; sourceTree = "<group>"; };
-		3B04939B15F54A3F00359708 /* NMMPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMPiece.m; sourceTree = "<group>"; };
+		3B04939B15F54A3F00359708 /* NMMPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NMMPiece.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3B04939E15F54A4F00359708 /* NMMPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMPosition.h; sourceTree = "<group>"; };
-		3B04939F15F54A4F00359708 /* NMMPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMPosition.m; sourceTree = "<group>"; };
+		3B04939F15F54A4F00359708 /* NMMPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NMMPosition.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3B0493A515F5783200359708 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon72.png; sourceTree = "<group>"; };
 		3B0493A715F578AB00359708 /* icon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon144.png; sourceTree = "<group>"; };
 		3B16B6ED15E90602000943B0 /* NMM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,19 +73,19 @@
 		3B16B70015E90602000943B0 /* NMMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMMAppDelegate.h; sourceTree = "<group>"; };
 		3B16B70115E90602000943B0 /* NMMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMMAppDelegate.m; sourceTree = "<group>"; };
 		3B16B70315E90602000943B0 /* NMMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMMViewController.h; sourceTree = "<group>"; };
-		3B16B70415E90602000943B0 /* NMMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMMViewController.m; sourceTree = "<group>"; };
+		3B16B70415E90602000943B0 /* NMMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NMMViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3B16B70715E90602000943B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NMMViewController.xib; sourceTree = "<group>"; };
 		3B16B70E15E90626000943B0 /* NMMStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMStartViewController.h; sourceTree = "<group>"; };
-		3B16B70F15E90626000943B0 /* NMMStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMStartViewController.m; sourceTree = "<group>"; };
+		3B16B70F15E90626000943B0 /* NMMStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NMMStartViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3B16B71015E90626000943B0 /* NMMStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMMStartViewController.xib; sourceTree = "<group>"; };
 		3B16B71315E90691000943B0 /* NMMInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMInfoViewController.h; sourceTree = "<group>"; };
-		3B16B71415E90691000943B0 /* NMMInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMInfoViewController.m; sourceTree = "<group>"; };
+		3B16B71415E90691000943B0 /* NMMInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NMMInfoViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3B16B71515E90691000943B0 /* NMMInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMMInfoViewController.xib; sourceTree = "<group>"; };
 		3B16B71815E90698000943B0 /* NMMOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMOptionsViewController.h; sourceTree = "<group>"; };
-		3B16B71915E90698000943B0 /* NMMOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMOptionsViewController.m; sourceTree = "<group>"; };
+		3B16B71915E90698000943B0 /* NMMOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NMMOptionsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3B16B71A15E90698000943B0 /* NMMOptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMMOptionsViewController.xib; sourceTree = "<group>"; };
 		3B16B71D15E906CA000943B0 /* NMM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMM.h; sourceTree = "<group>"; };
-		3B16B71E15E906CA000943B0 /* NMM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMM.m; sourceTree = "<group>"; };
+		3B16B71E15E906CA000943B0 /* NMM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NMM.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3B16B73015E91C78000943B0 /* sound0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound0.wav; path = NineMensMorris/Sound/sound0.wav; sourceTree = "<group>"; };
 		3B16B73A15E91E8A000943B0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3B16B73C15E91E8F000943B0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -416,7 +416,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -440,7 +440,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -455,6 +455,7 @@
 				GCC_PREFIX_HEADER = "NineMensMorris/NineMensMorris-Prefix.pch";
 				INFOPLIST_FILE = "NineMensMorris/NineMensMorris-Info.plist";
 				PRODUCT_NAME = NMM;
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -466,6 +467,7 @@
 				GCC_PREFIX_HEADER = "NineMensMorris/NineMensMorris-Prefix.pch";
 				INFOPLIST_FILE = "NineMensMorris/NineMensMorris-Info.plist";
 				PRODUCT_NAME = NMM;
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -18,12 +18,12 @@
 @end
 
 @implementation NMMOptionsViewController
-@synthesize soundLabel = _soundLabel;
-@synthesize soundSwitch = _soundSwitch;
-@synthesize flyingLabel = _flyingLabel;
-@synthesize flyingSwitch = _flyingSwitch;
-@synthesize returnButton = _returnButton;
-@synthesize delegate = _delegate;
+
+
+
+
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

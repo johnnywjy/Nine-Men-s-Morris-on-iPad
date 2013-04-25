@@ -16,9 +16,6 @@
 @end
 
 @implementation NMMStartViewController
-@synthesize startButton = _startButton;
-@synthesize optionsButton = _optionsButton;
-@synthesize infoButton = _infoButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

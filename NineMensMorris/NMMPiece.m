@@ -10,10 +10,6 @@
 
 @implementation NMMPiece
 
-@synthesize isOnBoard = _isOnBoard;
-@synthesize positionOnBoard = _positionOnBoard;
-@synthesize isRemoved = _isRemoved;
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

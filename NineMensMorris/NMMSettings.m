@@ -12,8 +12,8 @@
 
 +(NSString *)getSettingsPath{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingString:@"/settings.txt"];
+    NSString *documentsDirectory = paths[0];
+    NSString *path = [documentsDirectory stringByAppendingString:@"/settings"];
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]){
         NSLog(@"settings file not exist!");
         NSString *initSettings = @"10";

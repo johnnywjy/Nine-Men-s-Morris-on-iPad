@@ -29,21 +29,18 @@
 -(IBAction)startPressed:(UIButton *)sender
 {
     NMMViewController *controller = [[NMMViewController alloc] initWithNibName:@"NMMViewController" bundle:nil];
-    controller.delegate = self;
     [self presentViewController:controller animated:YES completion:nil];
 }
 
 
 - (IBAction)optionsPredded:(UIButton *)sender {
     NMMOptionsViewController *controller = [[NMMOptionsViewController alloc] initWithNibName:@"NMMOptionsViewController" bundle:nil];
-    controller.delegate = self;
     [self presentViewController:controller animated:YES completion:nil];
 
 }
 
 - (IBAction)infoPressed:(UIButton *)sender {
     NMMInfoViewController *controller = [[NMMInfoViewController alloc] initWithNibName:@"NMMInfoViewController" bundle:nil];
-    controller.delegate = self;
     [self presentViewController:controller animated:YES completion:nil];
 }
 
@@ -56,6 +53,10 @@
     [_startButton applyButtonStyle];
     [_optionsButton applyButtonStyle];
     [_infoButton applyButtonStyle];
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    [standardDefaults registerDefaults:@{SETTING_FLY: @NO, SETTING_SOUND:@YES}];
+    [standardDefaults synchronize];
 }
 
 - (void)viewDidUnload
@@ -72,12 +73,5 @@
 {
 	return autorotateSetting;
 }
-
-#pragma mark - NMMViewControllerDelegate
-
-- (void) dismissViewController:(UIViewController *)controller {
-    [controller dismissModalViewControllerAnimated:YES];
-}
-
 
 @end

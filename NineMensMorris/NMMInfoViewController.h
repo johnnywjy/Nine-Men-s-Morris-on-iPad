@@ -11,9 +11,7 @@
 #import "UILabel+NMMAdditions.h"
 #import "UITextView+NMMAdditions.h"
 #import "NMMSettings.h"
-#import "ModalViewDelegate.h"
 
 @interface NMMInfoViewController : UIViewController
 
-@property (nonatomic, weak) id <ModalViewDelegate> delegate;
 @end

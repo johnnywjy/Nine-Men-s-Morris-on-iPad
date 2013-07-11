@@ -24,9 +24,10 @@
 #define SOUND_MUTE 0 
 #define SOUND_ENABLED 1
 
-@interface NMMSettings : NSObject
 
-+(NSString *)getCurrentSettings;
-+(void)writeSettingsWithContent:(NSString *)content;
+#define SETTING_SOUND @"sound"
+#define SETTING_FLY @"canFly"
+
+@interface NMMSettings : NSObject
 
 @end

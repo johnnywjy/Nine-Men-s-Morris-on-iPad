@@ -94,21 +94,21 @@
 {
     [super viewDidLoad];
 
-    //init
     if (!nmm) {
         NSLog(@"nmm init");
         nmm = [[NMM alloc]init];
     }
-    
-    //read settings
-    NSString *settings = [NMMSettings getCurrentSettings];
-    if ([settings characterAtIndex:0] == '1') {//sound
+
+    bool sound  = [[NSUserDefaults standardUserDefaults] boolForKey:SETTING_SOUND];
+    bool canFly = [[NSUserDefaults standardUserDefaults] boolForKey:SETTING_FLY];
+
+    if (sound) {//sound
         soundStatus = SOUND_ENABLED;
     }else{
         soundStatus = SOUND_MUTE;
     }
     
-    if ([settings characterAtIndex:1] == '1') {
+    if (canFly) {
         [nmm setCanFly:YES];
     }else{
         [nmm setCanFly:NO];
@@ -425,7 +425,7 @@
 
 
 - (IBAction)returnPressed:(UIButton *)sender {
-    [self.delegate dismissViewController:self];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

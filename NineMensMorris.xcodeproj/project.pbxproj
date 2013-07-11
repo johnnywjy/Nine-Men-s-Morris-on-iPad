@@ -29,7 +29,6 @@
 		3B16B73115E91C78000943B0 /* sound0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B73015E91C78000943B0 /* sound0.wav */; };
 		3B16B73B15E91E8A000943B0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16B73A15E91E8A000943B0 /* AudioToolbox.framework */; };
 		3B16B73D15E91E8F000943B0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16B73C15E91E8F000943B0 /* GameKit.framework */; };
-		3B16B74015E936A2000943B0 /* NMMSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B16B73F15E936A2000943B0 /* NMMSettings.m */; };
 		3B190F2715F3BBF400929826 /* UITextView+NMMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B190F2615F3BBF400929826 /* UITextView+NMMAdditions.m */; };
 		3B190F5515F3C65F00929826 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4615F3C65F00929826 /* black.png */; };
 		3B190F5615F3C65F00929826 /* black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B190F4715F3C65F00929826 /* black@2x.png */; };
@@ -90,7 +89,6 @@
 		3B16B73A15E91E8A000943B0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3B16B73C15E91E8F000943B0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		3B16B73E15E936A2000943B0 /* NMMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMSettings.h; sourceTree = "<group>"; };
-		3B16B73F15E936A2000943B0 /* NMMSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMSettings.m; sourceTree = "<group>"; };
 		3B190F2515F3BBF400929826 /* UITextView+NMMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+NMMAdditions.h"; sourceTree = "<group>"; };
 		3B190F2615F3BBF400929826 /* UITextView+NMMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+NMMAdditions.m"; sourceTree = "<group>"; };
 		3B190F4615F3C65F00929826 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = NineMensMorris/Images/black.png; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 		3B41C5C015F137480001D2E7 /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Action_Man.ttf; path = Font/Action_Man.ttf; sourceTree = "<group>"; };
 		3B41C5C215F1393A0001D2E7 /* UILabel+NMMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NMMAdditions.h"; sourceTree = "<group>"; };
 		3B41C5C315F1393A0001D2E7 /* UILabel+NMMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NMMAdditions.m"; sourceTree = "<group>"; };
-		A4AFCD841725452100E82A0B /* ModalViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,11 +137,11 @@
 		3B16B6E215E90602000943B0 = {
 			isa = PBXGroup;
 			children = (
-				3B16B6F015E90602000943B0 /* Frameworks */,
-				3B16B72015E90C01000943B0 /* Images */,
 				3B16B6F715E90602000943B0 /* NineMensMorris */,
-				3B16B6EE15E90602000943B0 /* Products */,
+				3B16B72015E90C01000943B0 /* Images */,
 				3B16B72D15E919BB000943B0 /* Sound */,
+				3B16B6EE15E90602000943B0 /* Products */,
+				3B16B6F015E90602000943B0 /* Frameworks */,
 				3B16B6F815E90602000943B0 /* Supporting Files */,
 			);
 			sourceTree = "<group>";
@@ -173,29 +170,14 @@
 			isa = PBXGroup;
 			children = (
 				3B41C5B215F1017D0001D2E7 /* Categroies */,
-				A4AFCD841725452100E82A0B /* ModalViewDelegate.h */,
-				3B16B71D15E906CA000943B0 /* NMM.h */,
-				3B16B71E15E906CA000943B0 /* NMM.m */,
+				A481D329178E86410065EB8D /* Model */,
+				A481D32C178E865D0065EB8D /* Start */,
 				3B16B70015E90602000943B0 /* NMMAppDelegate.h */,
 				3B16B70115E90602000943B0 /* NMMAppDelegate.m */,
-				3B16B71315E90691000943B0 /* NMMInfoViewController.h */,
-				3B16B71415E90691000943B0 /* NMMInfoViewController.m */,
-				3B16B71515E90691000943B0 /* NMMInfoViewController.xib */,
-				3B16B71815E90698000943B0 /* NMMOptionsViewController.h */,
-				3B16B71915E90698000943B0 /* NMMOptionsViewController.m */,
-				3B16B71A15E90698000943B0 /* NMMOptionsViewController.xib */,
-				3B04939A15F54A3F00359708 /* NMMPiece.h */,
-				3B04939B15F54A3F00359708 /* NMMPiece.m */,
-				3B04939E15F54A4F00359708 /* NMMPosition.h */,
-				3B04939F15F54A4F00359708 /* NMMPosition.m */,
+				A481D32D178E86650065EB8D /* GameView */,
+				A481D32B178E86520065EB8D /* Options */,
+				A481D32A178E864B0065EB8D /* Info */,
 				3B16B73E15E936A2000943B0 /* NMMSettings.h */,
-				3B16B73F15E936A2000943B0 /* NMMSettings.m */,
-				3B16B70E15E90626000943B0 /* NMMStartViewController.h */,
-				3B16B70F15E90626000943B0 /* NMMStartViewController.m */,
-				3B16B71015E90626000943B0 /* NMMStartViewController.xib */,
-				3B16B70315E90602000943B0 /* NMMViewController.h */,
-				3B16B70415E90602000943B0 /* NMMViewController.m */,
-				3B16B70615E90602000943B0 /* NMMViewController.xib */,
 			);
 			path = NineMensMorris;
 			sourceTree = "<group>";
@@ -261,6 +243,67 @@
 				3B190F2615F3BBF400929826 /* UITextView+NMMAdditions.m */,
 			);
 			name = Categroies;
+			sourceTree = "<group>";
+		};
+		A481D329178E86410065EB8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B16B71D15E906CA000943B0 /* NMM.h */,
+				3B16B71E15E906CA000943B0 /* NMM.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A481D32A178E864B0065EB8D /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				3B16B71315E90691000943B0 /* NMMInfoViewController.h */,
+				3B16B71415E90691000943B0 /* NMMInfoViewController.m */,
+				3B16B71515E90691000943B0 /* NMMInfoViewController.xib */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		A481D32B178E86520065EB8D /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				3B16B71815E90698000943B0 /* NMMOptionsViewController.h */,
+				3B16B71915E90698000943B0 /* NMMOptionsViewController.m */,
+				3B16B71A15E90698000943B0 /* NMMOptionsViewController.xib */,
+			);
+			name = Options;
+			sourceTree = "<group>";
+		};
+		A481D32C178E865D0065EB8D /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				3B16B70E15E90626000943B0 /* NMMStartViewController.h */,
+				3B16B70F15E90626000943B0 /* NMMStartViewController.m */,
+				3B16B71015E90626000943B0 /* NMMStartViewController.xib */,
+			);
+			name = Start;
+			sourceTree = "<group>";
+		};
+		A481D32D178E86650065EB8D /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				A481D32E178E86B30065EB8D /* BoardComponents */,
+				3B16B70315E90602000943B0 /* NMMViewController.h */,
+				3B16B70415E90602000943B0 /* NMMViewController.m */,
+				3B16B70615E90602000943B0 /* NMMViewController.xib */,
+			);
+			name = GameView;
+			sourceTree = "<group>";
+		};
+		A481D32E178E86B30065EB8D /* BoardComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3B04939A15F54A3F00359708 /* NMMPiece.h */,
+				3B04939B15F54A3F00359708 /* NMMPiece.m */,
+				3B04939E15F54A4F00359708 /* NMMPosition.h */,
+				3B04939F15F54A4F00359708 /* NMMPosition.m */,
+			);
+			name = BoardComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +402,6 @@
 				3B16B71615E90691000943B0 /* NMMInfoViewController.m in Sources */,
 				3B16B71B15E90698000943B0 /* NMMOptionsViewController.m in Sources */,
 				3B16B71F15E906CA000943B0 /* NMM.m in Sources */,
-				3B16B74015E936A2000943B0 /* NMMSettings.m in Sources */,
 				3B41C5B115F101490001D2E7 /* UIFont+NMMAdditions.m in Sources */,
 				3B41C5B615F104D10001D2E7 /* UIButton+NMMAdditions.m in Sources */,
 				3B41C5C415F1393A0001D2E7 /* UILabel+NMMAdditions.m in Sources */,

@@ -10,10 +10,8 @@
 #import "NMMSettings.h"
 #import "UILabel+NMMAdditions.h"
 #import "UIButton+NMMAdditions.h"
-#import "ModalViewDelegate.h"
 
 @interface NMMOptionsViewController : UIViewController
 
-@property (nonatomic, weak) id <ModalViewDelegate> delegate;
 
 @end

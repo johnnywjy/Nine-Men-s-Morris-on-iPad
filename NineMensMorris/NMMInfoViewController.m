@@ -28,7 +28,7 @@
     return self;
 }
 - (IBAction)returnPressed:(UIButton *)sender {
-    [self.delegate dismissViewController:self];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad

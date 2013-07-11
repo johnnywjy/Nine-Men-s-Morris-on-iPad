@@ -19,24 +19,6 @@
 
 @implementation NMMOptionsViewController
 
-
-
-
-
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-- (IBAction)returnPressed:(UIButton *)sender {
-    [self.delegate dismissViewController:self];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -46,20 +28,53 @@
     [_flyingLabel applyLabelStyleDefault];
     [_returnButton applyButtonStyle];
     
-    NSString *currentSetting = [NMMSettings getCurrentSettings];
-    NSLog(@"sound %c", [currentSetting characterAtIndex:0]);
-    NSLog(@"fly %c", [currentSetting characterAtIndex:1]);
+    bool sound  = [[NSUserDefaults standardUserDefaults] boolForKey:SETTING_SOUND];
+    bool canFly = [[NSUserDefaults standardUserDefaults] boolForKey:SETTING_FLY];
+
+    NSLog(@"sound %d", sound);
+    NSLog(@"fly %d", canFly);
     
-    if ([currentSetting characterAtIndex:0] == '1') {
+    if (sound) {
         [_soundSwitch setOn:YES];
     }else{
         [_soundSwitch setOn:NO];
     }
     
-    if ([currentSetting characterAtIndex:1] == '1') {
+    if (canFly) {
         [_flyingSwitch setOn:YES];
     }else{
         [_flyingSwitch setOn:NO];
+    }
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return autorotateSetting;
+}
+
+- (IBAction)returnPressed:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)soundSwitch:(UISwitch *)sender
+{
+    if ([sender isOn]) {
+        NSLog(@"Sound Switch ON");
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SETTING_SOUND];
+    } else {
+        NSLog(@"Sound Switch OFF");
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:SETTING_SOUND];
+    }
+}
+
+-(IBAction)flyingSwitch:(UISwitch *)sender
+{
+    if ([sender isOn]) {
+        NSLog(@"Flying Switch ON");
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SETTING_FLY];
+    } else {
+        NSLog(@"Flying Switch OFF");
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:SETTING_FLY];
     }
 }
 
@@ -71,49 +86,6 @@
     [self setFlyingLabel:nil];
     [self setReturnButton:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-	return autorotateSetting;
-}
-
--(IBAction)soundSwitch:(UISwitch *)sender
-{
-    NSString *currentSetting = [NMMSettings getCurrentSettings];
-    char fly = [currentSetting characterAtIndex:1];
-    
-    if ([sender isOn]) {
-        NSLog(@"Sound Switch ON");
-        NSString *newSetting = [NSString stringWithFormat:@"1%c",fly];
-        NSLog(@"new setting: %@", newSetting);
-        [NMMSettings writeSettingsWithContent:newSetting];
-    } else {
-        NSLog(@"Sound Switch OFF");
-        NSString *newSetting = [NSString stringWithFormat:@"0%c",fly];
-        NSLog(@"new setting: %@", newSetting);
-        [NMMSettings writeSettingsWithContent:newSetting];
-    }
-}
-
--(IBAction)flyingSwitch:(UISwitch *)sender
-{
-    NSString *currentSetting = [NMMSettings getCurrentSettings];
-    char sound = [currentSetting characterAtIndex:0];
-    
-    if ([sender isOn]) {
-        NSLog(@"Flying Switch ON");
-        NSString *newSetting = [NSString stringWithFormat:@"%c1",sound];
-        NSLog(@"new setting: %@", newSetting);
-        [NMMSettings writeSettingsWithContent:newSetting];
-    } else {
-        NSLog(@"Flying Switch OFF");
-        NSString *newSetting = [NSString stringWithFormat:@"%c0",sound];
-        NSLog(@"new setting: %@", newSetting);
-        [NMMSettings writeSettingsWithContent:newSetting];
-    }
 }
 
 @end

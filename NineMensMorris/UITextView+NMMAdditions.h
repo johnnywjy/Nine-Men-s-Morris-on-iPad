@@ -2,7 +2,7 @@
 //  UITextView+NMMAdditions.h
 //  NineMensMorris
 //
-//  Created by lynny on 02/09/2012.
+//  Created by johnny on 02/09/2012.
 //  Copyright (c) 2012 UoL. All rights reserved.
 //
 

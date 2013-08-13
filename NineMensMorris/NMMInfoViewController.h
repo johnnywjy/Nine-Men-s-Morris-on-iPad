@@ -2,7 +2,7 @@
 //  NMMInfoViewController.h
 //  NMM
 //
-//  Created by lynny on 23/08/2012.
+//  Created by johnny on 23/08/2012.
 //  Copyright (c) 2012 jy. All rights reserved.
 //
 

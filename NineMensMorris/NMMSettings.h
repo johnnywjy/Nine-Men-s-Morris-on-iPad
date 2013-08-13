@@ -2,7 +2,7 @@
 //  NMMSettings.h
 //  NineMensMorris
 //
-//  Created by lynny on 25/08/2012.
+//  Created by johnny on 25/08/2012.
 //  Copyright (c) 2012 UoL. All rights reserved.
 //
 
@@ -28,6 +28,3 @@
 #define SETTING_SOUND @"sound"
 #define SETTING_FLY @"canFly"
 
-@interface NMMSettings : NSObject
-
-@end

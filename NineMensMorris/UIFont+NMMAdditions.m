@@ -2,7 +2,7 @@
 //  UIFont+NMMAdditions.m
 //  NineMensMorris
 //
-//  Created by lynny on 31/08/2012.
+//  Created by johnny on 31/08/2012.
 //  Copyright (c) 2012 UoL. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 
 + (id)nmmFontWithSize:(CGFloat)size
 {
-	return [UIFont fontWithName:@"Action Man" size:size];
+	return [UIFont fontWithName:@"System" size:size];
 }
 
 @end

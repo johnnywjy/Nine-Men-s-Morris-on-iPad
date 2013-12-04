@@ -53,6 +53,10 @@
 		A4469E1317BA85F300A82121 /* OPportrait.png in Resources */ = {isa = PBXBuildFile; fileRef = A4469E0E17BA85F300A82121 /* OPportrait.png */; };
 		A4469E1517BA85F300A82121 /* OptionsPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = A4469E1017BA85F300A82121 /* OptionsPortrait.png */; };
 		A4469E1717BA863B00A82121 /* portraitBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A4469E1617BA863B00A82121 /* portraitBG.png */; };
+		A491C1C7183FBB7B008D8057 /* NMMVC_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A491C1C6183FBB7B008D8057 /* NMMVC_iPhone.xib */; };
+		A491C1C9183FBBC9008D8057 /* NMMStartVC_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A491C1C8183FBBC9008D8057 /* NMMStartVC_iPhone.xib */; };
+		A491C1CB183FBDEA008D8057 /* NMMOptionsVC_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A491C1CA183FBDEA008D8057 /* NMMOptionsVC_iPhone.xib */; };
+		A491C1CD183FBDF8008D8057 /* NMMInfoVC_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A491C1CC183FBDF8008D8057 /* NMMInfoVC_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +122,10 @@
 		A4469E0E17BA85F300A82121 /* OPportrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OPportrait.png; sourceTree = "<group>"; };
 		A4469E1017BA85F300A82121 /* OptionsPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptionsPortrait.png; sourceTree = "<group>"; };
 		A4469E1617BA863B00A82121 /* portraitBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portraitBG.png; sourceTree = "<group>"; };
+		A491C1C6183FBB7B008D8057 /* NMMVC_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMMVC_iPhone.xib; sourceTree = "<group>"; };
+		A491C1C8183FBBC9008D8057 /* NMMStartVC_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMMStartVC_iPhone.xib; sourceTree = "<group>"; };
+		A491C1CA183FBDEA008D8057 /* NMMOptionsVC_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMMOptionsVC_iPhone.xib; sourceTree = "<group>"; };
+		A491C1CC183FBDF8008D8057 /* NMMInfoVC_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMMInfoVC_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,11 +179,11 @@
 		3B16B6F715E90602000943B0 /* NineMensMorris */ = {
 			isa = PBXGroup;
 			children = (
+				3B16B70015E90602000943B0 /* NMMAppDelegate.h */,
+				3B16B70115E90602000943B0 /* NMMAppDelegate.m */,
 				3B41C5B215F1017D0001D2E7 /* Categroies */,
 				A481D329178E86410065EB8D /* Model */,
 				A481D32C178E865D0065EB8D /* Start */,
-				3B16B70015E90602000943B0 /* NMMAppDelegate.h */,
-				3B16B70115E90602000943B0 /* NMMAppDelegate.m */,
 				A481D32D178E86650065EB8D /* GameView */,
 				A481D32B178E86520065EB8D /* Options */,
 				A481D32A178E864B0065EB8D /* Info */,
@@ -263,6 +271,7 @@
 				3B16B71315E90691000943B0 /* NMMInfoViewController.h */,
 				3B16B71415E90691000943B0 /* NMMInfoViewController.m */,
 				3B16B71515E90691000943B0 /* NMMInfoViewController.xib */,
+				A491C1CC183FBDF8008D8057 /* NMMInfoVC_iPhone.xib */,
 			);
 			name = Info;
 			sourceTree = "<group>";
@@ -273,6 +282,7 @@
 				3B16B71815E90698000943B0 /* NMMOptionsViewController.h */,
 				3B16B71915E90698000943B0 /* NMMOptionsViewController.m */,
 				3B16B71A15E90698000943B0 /* NMMOptionsViewController.xib */,
+				A491C1CA183FBDEA008D8057 /* NMMOptionsVC_iPhone.xib */,
 			);
 			name = Options;
 			sourceTree = "<group>";
@@ -283,6 +293,7 @@
 				3B16B70E15E90626000943B0 /* NMMStartViewController.h */,
 				3B16B70F15E90626000943B0 /* NMMStartViewController.m */,
 				3B16B71015E90626000943B0 /* NMMStartViewController.xib */,
+				A491C1C8183FBBC9008D8057 /* NMMStartVC_iPhone.xib */,
 			);
 			name = Start;
 			sourceTree = "<group>";
@@ -294,6 +305,7 @@
 				3B16B70315E90602000943B0 /* NMMViewController.h */,
 				3B16B70415E90602000943B0 /* NMMViewController.m */,
 				3B16B70615E90602000943B0 /* NMMViewController.xib */,
+				A491C1C6183FBB7B008D8057 /* NMMVC_iPhone.xib */,
 			);
 			name = GameView;
 			sourceTree = "<group>";
@@ -336,7 +348,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NMM;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = UoL;
 			};
 			buildConfigurationList = 3B16B6E715E90602000943B0 /* Build configuration list for PBXProject "NineMensMorris" */;
@@ -374,17 +386,21 @@
 				3B0493A815F578AB00359708 /* icon144.png in Resources */,
 				A4469DF817BA859E00A82121 /* black.png in Resources */,
 				A4469DF917BA859E00A82121 /* black@2x.png in Resources */,
+				A491C1CB183FBDEA008D8057 /* NMMOptionsVC_iPhone.xib in Resources */,
 				A4469DFA17BA859E00A82121 /* blackHL.png in Resources */,
 				A4469DFB17BA859E00A82121 /* blackHL@2x.png in Resources */,
 				A4469E0017BA85A800A82121 /* button.png in Resources */,
 				A4469E0117BA85A800A82121 /* button@2x.png in Resources */,
 				A4469E0217BA85A800A82121 /* buttonPressed.png in Resources */,
 				A4469E0317BA85A800A82121 /* buttonPressed@2x.png in Resources */,
+				A491C1CD183FBDF8008D8057 /* NMMInfoVC_iPhone.xib in Resources */,
 				A4469E0817BA85B300A82121 /* white.png in Resources */,
 				A4469E0917BA85B300A82121 /* white@2x.png in Resources */,
+				A491C1C7183FBB7B008D8057 /* NMMVC_iPhone.xib in Resources */,
 				A4469E0A17BA85B300A82121 /* whiteHL.png in Resources */,
 				A4469E0B17BA85B300A82121 /* whiteHL@2x.png in Resources */,
 				A4469E1117BA85F300A82121 /* InfoPortrait.png in Resources */,
+				A491C1C9183FBBC9008D8057 /* NMMStartVC_iPhone.xib in Resources */,
 				A4469E1217BA85F300A82121 /* landscapeBG.png in Resources */,
 				A4469E1317BA85F300A82121 /* OPportrait.png in Resources */,
 				A4469E1517BA85F300A82121 /* OptionsPortrait.png in Resources */,
@@ -441,10 +457,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -459,10 +476,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -472,10 +493,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -483,8 +505,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -501,7 +526,7 @@
 				GCC_PREFIX_HEADER = "NineMensMorris/NineMensMorris-Prefix.pch";
 				INFOPLIST_FILE = "NineMensMorris/NineMensMorris-Info.plist";
 				PRODUCT_NAME = NMM;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -513,7 +538,7 @@
 				GCC_PREFIX_HEADER = "NineMensMorris/NineMensMorris-Prefix.pch";
 				INFOPLIST_FILE = "NineMensMorris/NineMensMorris-Info.plist";
 				PRODUCT_NAME = NMM;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

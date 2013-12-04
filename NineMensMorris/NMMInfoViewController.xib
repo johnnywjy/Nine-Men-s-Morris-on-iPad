@@ -1,450 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="8.00">
-	<data>
-		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12E55</string>
-		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.39</string>
-		<string key="IBDocument.HIToolboxVersion">626.00</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">2083</string>
-		</object>
-		<array key="IBDocument.IntegratedClassDependencies">
-			<string>IBProxyObject</string>
-			<string>IBUIButton</string>
-			<string>IBUIImageView</string>
-			<string>IBUILabel</string>
-			<string>IBUITextView</string>
-			<string>IBUIView</string>
-		</array>
-		<array key="IBDocument.PluginDependencies">
-			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-		</array>
-		<object class="NSMutableDictionary" key="IBDocument.Metadata">
-			<string key="NS.key.0">PluginDependencyRecalculationVersion</string>
-			<integer value="1" key="NS.object.0"/>
-		</object>
-		<array class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
-			<object class="IBProxyObject" id="841351856">
-				<string key="IBProxiedObjectIdentifier">IBFilesOwner</string>
-				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-			</object>
-			<object class="IBProxyObject" id="606714003">
-				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
-				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-			</object>
-			<object class="IBUIView" id="766721923">
-				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">292</int>
-				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="233672765">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrameSize">{768, 1004}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="1020763382"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">InfoPortrait.png</string>
-						</object>
-					</object>
-					<object class="IBUIButton" id="2807003">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">271</int>
-						<string key="NSFrame">{{284, 862}, {200, 46}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<float key="IBUIAlpha">0.89999997615814209</float>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">return</string>
-						<object class="NSColor" key="IBUIHighlightedTitleColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
-						</object>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<object class="NSColor" key="IBUINormalTitleShadowColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC41AA</bytes>
-						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription">
-							<int key="type">2</int>
-							<double key="pointSize">15</double>
-						</object>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">15</double>
-							<int key="NSfFlags">16</int>
-						</object>
-					</object>
-					<object class="IBUILabel" id="113089792">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">290</int>
-						<string key="NSFrame">{{279, 319}, {200, 40}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="926297315"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">7</int>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Game Rule</string>
-						<nil key="IBUIHighlightedColor"/>
-						<int key="IBUIBaselineAdjustment">0</int>
-						<float key="IBUIMinimumFontSize">10</float>
-						<int key="IBUITextAlignment">1</int>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="888644474">
-							<int key="type">1</int>
-							<double key="pointSize">24</double>
-						</object>
-						<object class="NSFont" key="IBUIFont" id="461434921">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">24</double>
-							<int key="NSfFlags">16</int>
-						</object>
-					</object>
-					<object class="IBUITextView" id="926297315">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">258</int>
-						<string key="NSFrame">{{20, 367}, {728, 466}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="2807003"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
-						<bool key="IBUIEditable">NO</bool>
-						<object class="NSMutableString" key="IBUIText">
-							<bytes key="NS.bytes">RWFjaCBwbGF5ZXIgaGFzIG5pbmUgcGllY2VzLCBvciAibWVuIiwgd2hpY2ggbW92ZSBhbW9uZyB0aGUg
-Ym9hcmQncyB0d2VudHktZm91ciBzcG90cy4gVGhlIG9iamVjdCBvZiB0aGUgZ2FtZSBpcyB0byBsZWF2
-ZSB0aGUgb3Bwb3NpbmcgcGxheWVyIHdpdGggZmV3ZXIgdGhhbiB0aHJlZSBwaWVjZXMgb3IsIGFzIGlu
-IGNoZWNrZXJzLCBubyBsZWdhbCBtb3Zlcy4KCuKAqOKAqFBsYWNpbmcgdGhlIHBpZWNlcwpUaGUgYm9h
-cmQgYXQgdGhlIGJlZ2lubmluZyBvZiB0aGUgZ2FtZSwgYmVmb3JlIGFueSBwaWVjZXMgaGF2ZSBiZWVu
-IHBsYWNlZApUaGUgZ2FtZSBiZWdpbnMgd2l0aCBhbiBlbXB0eSBib2FyZC4gUGxheWVycyB0YWtlIHR1
-cm5zIHBsYWNpbmcgdGhlaXIgcGllY2VzIG9uIGVtcHR5IHNwb3RzLiBJZiBhIHBsYXllciBpcyBhYmxl
-IHRvIGZvcm0gYSBzdHJhaWdodCByb3cgb2YgdGhyZWUgcGllY2VzIGFsb25nIG9uZSBvZiB0aGUgYm9h
-cmQncyBsaW5lcyAoaS5lLiBub3QgZGlhZ29uYWxseSksIGhlIGhhcyBhICJtaWxsIiBhbmQgbWF5IHJl
-bW92ZSBvbmUgb2YgaGlzIG9wcG9uZW50J3MgcGllY2VzIGZyb20gdGhlIGJvYXJkOyByZW1vdmVkIHBp
-ZWNlcyBtYXkgbm90IGJlIHBsYWNlZCBhZ2Fpbi4gUGxheWVycyBtdXN0IHJlbW92ZSBhbnkgb3RoZXIg
-cGllY2VzIGZpcnN0IGJlZm9yZSByZW1vdmluZyBhIHBpZWNlIGZyb20gYSBmb3JtZWQgbWlsbC4gT25j
-ZSBhbGwgZWlnaHRlZW4gcGllY2VzIGhhdmUgYmVlbiB1c2VkLCBwbGF5ZXJzIHRha2UgdHVybnMgbW92
-aW5nLgoKTW92aW5nIHRoZSBwaWVjZXMKVG8gbW92ZSwgYSBwbGF5ZXIgc2xpZGVzIG9uZSBvZiBoaXMg
-cGllY2VzIGFsb25nIGEgYm9hcmQgbGluZSB0byBhbiBlbXB0eSBhZGphY2VudCBzcG90LiBJZiBoZSBj
-YW5ub3QgZG8gc28sIGhlIGhhcyBsb3N0IHRoZSBnYW1lLgpBcyBpbiB0aGUgcGxhY2VtZW50IHN0YWdl
-LCBhIHBsYXllciB3aG8gYWxpZ25zIHRocmVlIG9mIGhpcyBwaWVjZXMgb24gYSBib2FyZCBsaW5lIGhh
-cyBhIG1pbGwgYW5kIG1heSByZW1vdmUgb25lIG9mIGhpcyBvcHBvbmVudCdzIHBpZWNlcywgYXZvaWRp
-bmcgdGhlIHJlbW92YWwgb2YgcGllY2VzIGluIG1pbGxzIGlmIGF0IGFsbCBwb3NzaWJsZS4KQW55IHBs
-YXllciByZWR1Y2VkIHRvIHR3byBwaWVjZXMgaXMgdW5hYmxlIHRvIHJlbW92ZSBhbnkgbW9yZSBvcHBv
-c2luZyBwaWVjZXMgYW5kIHRodXMgbG9zZXMgdGhlIGdhbWUuCgpGbHlpbmcKSW4gb25lIGNvbW1vbiB2
-YXJpYXRpb24sIG9uY2UgYSBwbGF5ZXIgaXMgcmVkdWNlZCB0byB0aHJlZSBwaWVjZXMsIGhpcyBwaWVj
-ZXMgbWF5ICJmbHkiLCAiaG9wIiBvciAianVtcCIgdG8gYW55IGVtcHR5IHNwb3RzLCBub3Qgb25seSBh
-ZGphY2VudCBvbmVzLiBTb21lIHNvdXJjZXMgb2YgdGhlIHJ1bGVzIHNheSB0aGlzIGlzIHRoZSB3YXkg
-dGhlIGdhbWUgaXMgcGxheWVkLCBzb21lIHRyZWF0IGl0IGFzIGEgdmFyaWF0aW9uLCBhbmQgc29tZSBk
-b24ndCBtZW50aW9uIGl0IGF0IGFsbC4gQSAnMTl0aCBDZW50dXJ5IEdhbWVzIE1hbnVhbCcgY2FsbHMg
-dGhpcyB0aGUgInRydWx5IHJ1c3RpYyBtb2RlIG9mIHBsYXlpbmcgdGhlIGdhbWUiLg</bytes>
-						</object>
-						<object class="NSColor" key="IBUITextColor" id="271191819">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MAA</bytes>
-						</object>
-						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
-							<int key="IBUIAutocapitalizationType">2</int>
-							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						</object>
-						<reference key="IBUIFontDescription" ref="888644474"/>
-						<reference key="IBUIFont" ref="461434921"/>
-					</object>
-					<object class="IBUILabel" id="1020763382">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">290</int>
-						<string key="NSFrame">{{284, 114}, {200, 40}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="494388279"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">7</int>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Introduction</string>
-						<nil key="IBUIHighlightedColor"/>
-						<int key="IBUIBaselineAdjustment">0</int>
-						<float key="IBUIMinimumFontSize">10</float>
-						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="888644474"/>
-						<reference key="IBUIFont" ref="461434921"/>
-					</object>
-					<object class="IBUITextView" id="494388279">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">258</int>
-						<string key="NSFrame">{{20, 157}, {728, 149}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="113089792"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
-						<bool key="IBUIEditable">NO</bool>
-						<string type="base64-UTF8" key="IBUIText">TmluZSBNZW4ncyBNb3JyaXMgaXMgYSBzdHJhdGVneSBib2FyZCBnYW1lIGZvciB0d28gcGxheWVycyB0
-aGF0IGVtZXJnZWQgZnJvbSB0aGUgUm9tYW4gRW1waXJlLiBUaGUgZ2FtZSBpcyBhbHNvIGtub3duIGFz
-IE5pbmUgTWFuIE1vcnJpcywgTWlsbCwgTWlsbHMsIE1lcmVscywgTWVyZWxsZXMsIGFuZCBNZXJyaWxs
-cyBpbiBFbmdsaXNoLiBUaGlzIGdhbWUgaXMgYWxzbyBrbm93biBhcyAiQ293Ym95IENoZWNrZXJzIiBh
-bmQgd2FzIG9uY2UgcHJpbnRlZCBvbiB0aGUgYmFjayBvZiBjaGVja2VyYm9hcmRzLgpWYXJpYW50cyBv
-ZiBOaW5lIE1lbidzIE1vcnJpcyBpbmNsdWRlIFRocmVlIE1lbidzIE1vcnJpcywgU2l4IE1lbidzIE1v
-cnJpcywgYW5kIFR3ZWx2ZSBNZW4ncyBNb3JyaXMuA</string>
-						<reference key="IBUITextColor" ref="271191819"/>
-						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
-							<int key="IBUIAutocapitalizationType">2</int>
-							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						</object>
-						<reference key="IBUIFontDescription" ref="888644474"/>
-						<reference key="IBUIFont" ref="461434921"/>
-					</object>
-				</array>
-				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="233672765"/>
-				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MQA</bytes>
-					<object class="NSColorSpace" key="NSCustomColorSpace">
-						<int key="NSID">2</int>
-					</object>
-				</object>
-				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
-					<int key="IBUIStatusBarStyle">2</int>
-				</object>
-				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-			</object>
-		</array>
-		<object class="IBObjectContainer" key="IBDocument.Objects">
-			<array class="NSMutableArray" key="connectionRecords">
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">view</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="766721923"/>
-					</object>
-					<int key="connectionID">3</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">returnButton</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="2807003"/>
-					</object>
-					<int key="connectionID">6</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">ruleLabel</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="113089792"/>
-					</object>
-					<int key="connectionID">10</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">ruleText</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="926297315"/>
-					</object>
-					<int key="connectionID">13</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">introLabel</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="1020763382"/>
-					</object>
-					<int key="connectionID">16</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">introText</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="494388279"/>
-					</object>
-					<int key="connectionID">17</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">returnPressed:</string>
-						<reference key="source" ref="2807003"/>
-						<reference key="destination" ref="841351856"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">5</int>
-				</object>
-			</array>
-			<object class="IBMutableOrderedSet" key="objectRecords">
-				<array key="orderedObjects">
-					<object class="IBObjectRecord">
-						<int key="objectID">0</int>
-						<array key="object" id="0"/>
-						<reference key="children" ref="1000"/>
-						<nil key="parent"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">-1</int>
-						<reference key="object" ref="841351856"/>
-						<reference key="parent" ref="0"/>
-						<string key="objectName">File's Owner</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">-2</int>
-						<reference key="object" ref="606714003"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">2</int>
-						<reference key="object" ref="766721923"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="233672765"/>
-							<reference ref="2807003"/>
-							<reference ref="1020763382"/>
-							<reference ref="113089792"/>
-							<reference ref="926297315"/>
-							<reference ref="494388279"/>
-						</array>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">4</int>
-						<reference key="object" ref="2807003"/>
-						<reference key="parent" ref="766721923"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">7</int>
-						<reference key="object" ref="233672765"/>
-						<reference key="parent" ref="766721923"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">9</int>
-						<reference key="object" ref="113089792"/>
-						<reference key="parent" ref="766721923"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">12</int>
-						<reference key="object" ref="926297315"/>
-						<reference key="parent" ref="766721923"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">14</int>
-						<reference key="object" ref="1020763382"/>
-						<reference key="parent" ref="766721923"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">15</int>
-						<reference key="object" ref="494388279"/>
-						<reference key="parent" ref="766721923"/>
-					</object>
-				</array>
-			</object>
-			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">NMMInfoViewController</string>
-				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="-2.CustomClassName">UIResponder</string>
-				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="0.0" key="4.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
-				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			</dictionary>
-			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
-			<nil key="activeLocalization"/>
-			<dictionary class="NSMutableDictionary" key="localizations"/>
-			<nil key="sourceID"/>
-			<int key="maxID">17</int>
-		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">NMMInfoViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">returnPressed:</string>
-						<string key="NS.object.0">UIButton</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">returnPressed:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">returnPressed:</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-					</object>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="introLabel">UILabel</string>
-						<string key="introText">UITextView</string>
-						<string key="returnButton">UIButton</string>
-						<string key="ruleLabel">UILabel</string>
-						<string key="ruleText">UITextView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="introLabel">
-							<string key="name">introLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="introText">
-							<string key="name">introText</string>
-							<string key="candidateClassName">UITextView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="returnButton">
-							<string key="name">returnButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="ruleLabel">
-							<string key="name">ruleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="ruleText">
-							<string key="name">ruleText</string>
-							<string key="candidateClassName">UITextView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NMMInfoViewController.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
-		<int key="IBDocument.localizationMode">0</int>
-		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1552" key="NS.object.0"/>
-		</object>
-		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">InfoPortrait.png</string>
-			<string key="NS.object.0">{768, 1024}</string>
-		</object>
-		<string key="IBCocoaTouchPluginVersion">2083</string>
-	</data>
-</archive>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NMMInfoViewController">
+            <connections>
+                <outlet property="introLabel" destination="14" id="16"/>
+                <outlet property="introText" destination="15" id="17"/>
+                <outlet property="returnButton" destination="4" id="6"/>
+                <outlet property="ruleLabel" destination="9" id="10"/>
+                <outlet property="ruleText" destination="12" id="13"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="InfoPortrait.png" id="7">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4">
+                    <rect key="frame" x="284" y="882" width="200" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="return">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="returnPressed:" destination="-1" eventType="touchUpInside" id="5"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game Rule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="9">
+                    <rect key="frame" x="279" y="319" width="200" height="40"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" id="12">
+                    <rect key="frame" x="20" y="367" width="728" height="466"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                    <string key="text">Each player has nine pieces, or "men", which move among the board's twenty-four spots. The object of the game is to leave the opposing player with fewer than three pieces or, as in checkers, no legal moves.
+
+  Placing the pieces
+The board at the beginning of the game, before any pieces have been placed
+The game begins with an empty board. Players take turns placing their pieces on empty spots. If a player is able to form a straight row of three pieces along one of the board's lines (i.e. not diagonally), he has a "mill" and may remove one of his opponent's pieces from the board; removed pieces may not be placed again. Players must remove any other pieces first before removing a piece from a formed mill. Once all eighteen pieces have been used, players take turns moving.
+
+Moving the pieces
+To move, a player slides one of his pieces along a board line to an empty adjacent spot. If he cannot do so, he has lost the game.
+As in the placement stage, a player who aligns three of his pieces on a board line has a mill and may remove one of his opponent's pieces, avoiding the removal of pieces in mills if at all possible.
+Any player reduced to two pieces is unable to remove any more opposing pieces and thus loses the game.
+
+Flying
+In one common variation, once a player is reduced to three pieces, his pieces may "fly", "hop" or "jump" to any empty spots, not only adjacent ones. Some sources of the rules say this is the way the game is played, some treat it as a variation, and some don't mention it at all. A '19th Century Games Manual' calls this the "truly rustic mode of playing the game".</string>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Introduction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="14">
+                    <rect key="frame" x="284" y="114" width="200" height="40"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" id="15">
+                    <rect key="frame" x="20" y="157" width="728" height="149"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                    <string key="text">Nine Men's Morris is a strategy board game for two players that emerged from the Roman Empire. The game is also known as Nine Man Morris, Mill, Mills, Merels, Merelles, and Merrills in English. This game is also known as "Cowboy Checkers" and was once printed on the back of checkerboards.
+Variants of Nine Men's Morris include Three Men's Morris, Six Men's Morris, and Twelve Men's Morris.</string>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="InfoPortrait.png" width="768" height="1024"/>
+    </resources>
+</document>
